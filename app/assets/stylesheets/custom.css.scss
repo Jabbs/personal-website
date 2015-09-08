@@ -31,6 +31,13 @@ $linkColor: #686868;
 	         border-radius: 15em;
 }
 
+/* Bootstrap Overrides */
+* { border-radius: 0 !important; }
+.input-group, .form-group {margin:0px; padding:0px;}
+.alert {margin-bottom:0px; border-radius:0px;}
+button {margin:0px;}
+
+
 /* Colors, Misc */
 
 // From original CAW website:
@@ -86,6 +93,7 @@ body {
   font-family: sans-serif;
 	font-weight:300;
 }
+h1, h2, h3, h4, h5, h6, p { margin: 0px; padding: 0px; }
 h1, h2, h3, h4 { font-family: sans-serif; font-weight:300; }
 h5, h6 { font-family: sans-serif; font-style:italic}
 .inline { display: inline; }
@@ -190,3 +198,43 @@ a.highlight-link-bubble {
 	-moz-border-radius: 15em;
 	border-radius: 15em;
 }
+
+/* Static Pages - Home */
+
+.box {
+	border: none;
+	padding: 0px;
+	background: $grey_dark;
+	color: $white;
+	border-radius: 0;
+	.content { padding: 10px; }
+	p { margin-top: 5px; }
+}
+.box.lightgrey { background: $grey; color: $grey_dark; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
