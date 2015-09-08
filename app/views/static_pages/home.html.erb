@@ -11,33 +11,42 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-9">
-				<%= render "shared/map", height: "260px" %>
-			</div>
-			<div class="col-md-3">
-				<div class="box lightgrey">
-					<%= form_for @contact_request do |f| %>
-						<div class="content">
-							<h4 class="center bottom-margin-small">CONTACT</h4>
-							<div class="form-group">
-								<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon1"><i class='fa fa-user' style="padding-left:2px;padding-right:2px;"></i></span>
-								  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" aria-describedby="sizing-addon1" autocomplete="off" required>
-								</div>
-								<div class="input-group top-margin-tiny">
-								  <span class="input-group-addon" id="sizing-addon2"><span style="padding-left:0px;padding-right:0px;">@</span></span>
-								  <input type="email" class="form-control" placeholder="Email Address" name="contact_request[email]" aria-describedby="sizing-addon2" autocomplete="off" required>
-								</div>
-								<div class="input-group top-margin-tiny">
-								  <span class="input-group-addon"><i class='fa fa-comment-o' style="padding-left:1px;padding-right:0px;"></i></span>
-								  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="3"></textarea>
-								</div>
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-8 remove-gutter-right-desktop">
+						<div style="border-top: 10px solid rgb(108, 109, 109); border-bottom: 10px solid rgb(108, 109, 109);">
+							<%= render "shared/map", height: "300px" %>
+						</div>
+						
+					</div>
+					<div class="col-md-4 remove-gutter-left-desktop">
+						<div style="border-top: 10px solid rgb(108, 109, 109); border-bottom: 10px solid rgb(108, 109, 109);">
+							<div class="box lightgrey" style="height: 300px; border-left: 1px solid rgb(108, 109, 109);">
+								<%= form_for @contact_request do |f| %>
+									<div class="content">
+										<h4 class="center bottom-margin-small">CONTACT</h4>
+										<div class="form-group">
+											<div class="input-group">
+											  <span class="input-group-addon" id="sizing-addon1"><i class='fa fa-user' style="padding-left:2px;padding-right:2px;"></i></span>
+											  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" aria-describedby="sizing-addon1" autocomplete="off" required>
+											</div>
+											<div class="input-group top-margin-small">
+											  <span class="input-group-addon" id="sizing-addon2"><span style="padding-left:0px;padding-right:0px;">@</span></span>
+											  <input type="email" class="form-control" placeholder="Email Address" name="contact_request[email]" aria-describedby="sizing-addon2" autocomplete="off" required>
+											</div>
+											<div class="input-group top-margin-small">
+											  <span class="input-group-addon"><i class='fa fa-comment-o' style="padding-left:1px;padding-right:0px;"></i></span>
+											  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="5"></textarea>
+											</div>
+										</div>
+										<%= render "shared/spamcatcher_field" %>
+										<%= f.button "Send Message", data: { disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." }, class: "btn btn-default btn-block top-margin-small" %>
+									</div>
+								<% end %>
 							</div>
-							<%= render "shared/spamcatcher_field" %>
-							<%= f.button "Send", data: { disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." }, class: "btn btn-default btn-block top-margin-tiny" %>
 						</div>
 
-					<% end %>
+					</div>
 				</div>
 			</div>
 		</div>
