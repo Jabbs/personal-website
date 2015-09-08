@@ -1,0 +1,192 @@
+$linkColor: #686868;
+@import "bootstrap";
+
+/* MIXINS */
+@mixin rounded_border_lg {
+	 -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	         border-radius: 10px;
+}
+@mixin rounded_border {
+	 -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	         border-radius: 5px;
+}
+@mixin rounded_border_sm {
+	 -webkit-border-radius: 3px;
+	    -moz-border-radius: 3px;
+	         border-radius: 3px;
+}
+@mixin rounded_top_border {
+	 -webkit-border-top-right-radius: 5px;
+	    -moz-border-top-right-radius: 5px;
+	         border-top-right-radius: 5px;
+	 -webkit-border-top-left-radius: 5px;
+	    -moz-border-top-left-radius: 5px;
+	         border-top-left-radius: 5px;
+}
+@mixin circle_border {
+	 -webkit-border-radius: 15em;
+	    -moz-border-radius: 15em;
+	         border-radius: 15em;
+}
+
+/* Colors, Misc */
+
+// From original CAW website:
+$white: #fff; $blue: rgb(23, 54, 93);
+$orange: rgb(251,185,11); $orange2: #ffcc11; $orange3: #ffc414;
+$grey_dark: rgb(108, 109, 109); $grey_light: rgb(213, 215, 214);
+// Others:
+$green: #7CC75C; $green_dark: #65A24B;
+$grey: #DBDBDB;
+$yellow: #E3D423; $yellow_light: #eff2b9;
+$header_background: white;
+$link_color: $blue;
+$red: #C15248;
+$fb_color: #3B5998; $tw_color: #4099FF; $gp_color: #d34836;
+
+// From the new Style Guide
+$dark_blue: #0f294a; $light_orange: #ffc62c; $body_grey: #4a4a4a;
+
+.white {color: white;}
+.green {color: $green;}
+.green-dark {color: darken($green, 10%);}
+.yellow {color: $yellow;}
+.orange {color: lighten($orange, 10%);}
+.orange-dark {color: darken($orange, 8%);}
+.red {color: $red;}
+.blue {color: $blue;}
+.black {color: black;}
+.grey {color: $grey;}
+.grey-dark {color: $grey_dark;}
+.grey-light {color: lighten($grey_dark, 20%);}
+.grey-light a {color: lighten($grey_dark, 20%);}
+a.grey-light {color: lighten($grey_dark, 20%);}
+.fb-color {color: $fb_color;}
+.tw-color {color: $tw_color;}
+.gp-color {color: $gp_color;}
+.yellow-background { background: $yellow; }
+.red-background { background: $red; }
+.green-background { background: $green_dark; }
+.orange-background { background: $orange; }
+.light-orange-background { background: $light_orange; }
+.grey-background { background: $grey_dark; }
+.grey-light-background { background: $grey; }
+.blue-hr { border-top: 1px solid $blue; border-bottom: 1px solid $blue; }
+.grey-hr { border-top: 1px solid $grey_dark; border-bottom: 1px solid $grey_dark; }
+.grey-light-hr { border-top: 1px solid darken($grey_light, 10%); border-bottom: 1px solid darken($grey_light, 10%); }
+.bold { font-weight: bold; }
+.grey-background-shell {background: $grey; padding: 20px;}
+
+/* Universal */
+body {
+  color: $body_grey;
+  background: $white;
+  font-family: sans-serif;
+	font-weight:300;
+}
+h1, h2, h3, h4 { font-family: sans-serif; font-weight:300; }
+h5, h6 { font-family: sans-serif; font-style:italic}
+.inline { display: inline; }
+.huge { font-size: 500%; line-height: 100%; }
+.large {font-size: 375%;}
+.bigger {font-size: 200%;}
+.big {font-size: 150%;}
+.heavy {font-size: 130%;}
+.smaller {font-size: 90%;line-height: 130%;}
+.small {font-size: 80%;line-height: 120%;}
+.tiny {font-size: 70%;line-height: 120%;}
+.no-right-margin { margin-right: 0px; }
+.no-left-margin { margin-left: 0px; }
+.no-top-margin { margin-top: 0px; }
+.no-bottom-margin { margin-bottom: 0px; }
+.no-margin { margin: 0px; }
+.bottom-margin-small { margin-bottom: 10px;}
+.bottom-margin { margin-bottom:20px; }
+.bottom-padding { padding-bottom:20px; }
+.bottom-padding-small { padding-bottom:10px; }
+.top-padding-small { padding-top:10px; }
+.small-right-margin { margin-right:5px; }
+.right-margin { margin-right:20px; }
+.left-margin { margin-left:20px; }
+.large-bottom-margin { margin-bottom:40px; }
+.big-bottom-margin { margin-bottom:60px; }
+.big-top-margin { margin-top:60px; }
+.huge-top-margin { margin-top:100px; }
+.huge-bottom-margin { margin-bottom:100px; }
+.top-margin { margin-top:20px; }
+.top-margin-avg { margin-top:15px; }
+.top-margin-small { margin-top:10px; }
+.top-margin-tiny { margin-top:5px; }
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+.left-padding { padding-left: 20px; }
+.pointer { cursor: pointer; }
+.no-pointer { cursor: auto; }
+.no-decoration { text-decoration: none; }
+a.no-decoration:hover { text-decoration: none; }
+.underline { text-decoration: underline; }
+.top-padding { padding-top:20px; }
+.no-padding {padding:0px;}
+.no-right-padding {padding-right:0px;}
+.no-left-padding {padding-left:0px;}
+.no-height {height: 0px;}
+a.black-link { color:lighten(black, 10%); &:hover {text-decoration:none;color: black;} }
+a.grey-link { color:darken($grey, 10%); &:hover {text-decoration:none;color: $grey_dark;} }
+a.grey-dark-link { color: $grey_dark; &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
+a.grey-darkened-link { color: darken($grey_dark, 10%); &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
+a.orange { color: $orange; }
+a.orange:hover { color: darken($orange, 10%); }
+a.orange-like-link { color: $orange; }
+a.orange-like-link:hover { color: $orange; text-decoration: none; }
+a.like-link:hover { color: $orange; text-decoration: none; }
+.loading-spinner {
+	display: none;
+	color: $grey_dark;
+	font-size: 300%;
+	text-align: center;
+}
+.indent20 {margin-left: 40px;}
+.indent40 {margin-left: 80px;}
+.indent60 {margin-left: 120px;}
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+a.highlight-link-bubble {
+	padding: 3px 5px;
+	background: transparent;
+	@include rounded_border;
+}
+.highlight-link-bubble.active {
+	background: $grey_dark;
+	color: $white;
+	@include rounded_border;
+}
+.ui-autocomplete {
+    z-index: 5000;
+}
+#banner-big {
+  background-image: url("//s3.amazonaws.com/caw-prod/home/chicago_cityscape_big.png");
+  min-height: 536px;
+}
+.border {border: 2px solid $grey_dark;}
+.circle-border {border: 2px solid $grey_dark; @include circle_border;}
+.rounded-border {border: 2px solid $white; @include rounded_border;}
+.rounded-border-dark {border: 2px solid $grey_dark; @include rounded_border;}
+.rounded-top-border {@include rounded_top_border;}
+.top-border { border-top: 2px solid $grey; }
+.top-border-dark { border-top: 2px solid $grey_dark; }
+.top-border-thin { border-top: 1px solid $grey; }
+.bottom-border-dark { border-bottom: 2px solid $grey_dark; }
+.bottom-border { border-bottom: 2px solid $grey; }
+.bottom-border-thin { border-bottom: 1px solid $grey; }
+.box { border: 1px solid $grey; padding: 10px; @include rounded_border; background: $white; }
+.silent { color: $grey; }
+.circle-image {
+	-webkit-border-radius: 15em;
+	-moz-border-radius: 15em;
+	border-radius: 15em;
+}
