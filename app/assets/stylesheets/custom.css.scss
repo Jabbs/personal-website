@@ -212,7 +212,10 @@ a.highlight-link-bubble {
 }
 .box.lightgrey { background: $grey; color: $grey_dark; }
 
-
+#banner {
+  background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm.jpg");
+  min-height: 1500px;
+}
 
 
 
