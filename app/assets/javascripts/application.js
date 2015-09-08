@@ -17,3 +17,26 @@
 //= require gmaps/google
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+	
+	$(".li-about").mouseenter(function(){
+		$(this).addClass("line-about");
+	});
+	$(".li-about").mouseleave(function(){
+		$(this).removeClass("line-about");
+	});
+	$(".li-portfolio").mouseenter(function(){
+		$(this).addClass("line-portfolio");
+	});
+	$(".li-portfolio").mouseleave(function(){
+		$(this).removeClass("line-portfolio");
+	});
+	$(".li-services").mouseenter(function(){
+		$(this).addClass("line-services");
+	});
+	$(".li-services").mouseleave(function(){
+		$(this).removeClass("line-services");
+	});
+	
+});

@@ -53,6 +53,13 @@ $link_color: $blue;
 $red: #C15248;
 $fb_color: #3B5998; $tw_color: #4099FF; $gp_color: #d34836;
 
+// New:
+$green: #7ac142;
+$orange: #f5af02;
+$blue: #0064d2;
+$grey: #808084;
+$red: #e53238;
+
 // From the new Style Guide
 $dark_blue: #0f294a; $light_orange: #ffc62c; $body_grey: #4a4a4a;
 
@@ -145,6 +152,7 @@ a.black-link { color:lighten(black, 10%); &:hover {text-decoration:none;color: b
 a.grey-link { color:darken($grey, 10%); &:hover {text-decoration:none;color: $grey_dark;} }
 a.grey-dark-link { color: $grey_dark; &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
 a.grey-darkened-link { color: darken($grey_dark, 10%); &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
+a.white-link{ color: $white; }
 a.orange { color: $orange; }
 a.orange:hover { color: darken($orange, 10%); }
 a.orange-like-link { color: $orange; }
@@ -204,18 +212,27 @@ a.highlight-link-bubble {
 .box {
 	border: none;
 	padding: 0px;
-	background: $grey_dark;
+	background: $grey;
 	color: $white;
 	border-radius: 0;
 	.content { padding: 10px; }
 	p { margin-top: 5px; }
 }
-.box.lightgrey { background: $grey; color: $grey_dark; }
+.box.about-box { background: $green; }
+.box.portfolio-box { background: $orange; }
+.box.services-box { background: $blue; }
+.box.lightgrey { background: $grey; color: $white; }
 
 #banner {
   background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm.jpg");
   min-height: 1500px;
 }
+li { border-bottom: 3px solid transparent; }
+li:hover {}
+
+.line-about { border-color: $green; }
+.line-portfolio { border-color: $orange; }
+.line-services { border-color: $blue; }
 
 
 

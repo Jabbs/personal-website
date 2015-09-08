@@ -4,8 +4,42 @@
 			<div class="col-md-12">
 				<div class="box center">
 					<div class="content" style="padding-top:20px; padding-bottom:20px;">
-						<h1>PETE JABBOUR</h1>
+						<h1 title="Pete Jabbour">PETE JABBOUR</h1>
 						<p>Technology Consultant &amp; Full-Stack Engineer</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="list-unstyled list-inline">
+					<li class="li-about">About</li>
+					<li class="li-portfolio">Portfolio</li>
+					<li class="li-services">Services</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row bottom-margin">
+			<div class="col-md-12">
+				<div class="box about-box">
+					<div class="content">
+						Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Etiam imperdiet imperdiet orci. Aenean massa.
+
+						Donec venenatis vulputate lorem. Phasellus tempus. Donec posuere vulputate arcu. Quisque rutrum. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo.
+					</div>
+				</div>
+				<div class="box portfolio-box">
+					<div class="content">
+						Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Etiam imperdiet imperdiet orci. Aenean massa.
+
+						Donec venenatis vulputate lorem. Phasellus tempus. Donec posuere vulputate arcu. Quisque rutrum. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo.
+					</div>
+				</div>
+				<div class="box services-box">
+					<div class="content">
+						Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Etiam imperdiet imperdiet orci. Aenean massa.
+
+						Donec venenatis vulputate lorem. Phasellus tempus. Donec posuere vulputate arcu. Quisque rutrum. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo.
 					</div>
 				</div>
 			</div>
@@ -14,38 +48,52 @@
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-8 remove-gutter-right-desktop">
-						<div style="border-top: 10px solid rgb(108, 109, 109); border-bottom: 10px solid rgb(108, 109, 109);">
-							<%= render "shared/map", height: "300px" %>
-						</div>
-						
+						<%= render "shared/map", height: "300px" %>
 					</div>
 					<div class="col-md-4 remove-gutter-left-desktop">
-						<div style="border-top: 10px solid rgb(108, 109, 109); border-bottom: 10px solid rgb(108, 109, 109);">
-							<div class="box lightgrey" style="height: 300px; border-left: 1px solid rgb(108, 109, 109);">
-								<%= form_for @contact_request do |f| %>
-									<div class="content">
-										<h4 class="center bottom-margin-small">CONTACT</h4>
-										<div class="form-group">
-											<div class="input-group">
-											  <span class="input-group-addon" id="sizing-addon1"><i class='fa fa-user' style="padding-left:2px;padding-right:2px;"></i></span>
-											  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" aria-describedby="sizing-addon1" autocomplete="off" required>
-											</div>
-											<div class="input-group top-margin-small">
-											  <span class="input-group-addon" id="sizing-addon2"><span style="padding-left:0px;padding-right:0px;">@</span></span>
-											  <input type="email" class="form-control" placeholder="Email Address" name="contact_request[email]" aria-describedby="sizing-addon2" autocomplete="off" required>
-											</div>
-											<div class="input-group top-margin-small">
-											  <span class="input-group-addon"><i class='fa fa-comment-o' style="padding-left:1px;padding-right:0px;"></i></span>
-											  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="5"></textarea>
-											</div>
+						<div class="box lightgrey" style="height: 300px;">
+							<%= form_for @contact_request do |f| %>
+								<div class="content">
+									<h4 class="center bottom-margin-small">CONTACT</h4>
+									<div class="form-group">
+										<div class="input-group">
+										  <span class="input-group-addon" id="sizing-addon1"><i class='fa fa-user' style="padding-left:2px;padding-right:2px;"></i></span>
+										  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" aria-describedby="sizing-addon1" autocomplete="off" required>
 										</div>
-										<%= render "shared/spamcatcher_field" %>
-										<%= f.button "Send Message", data: { disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." }, class: "btn btn-default btn-block top-margin-small" %>
+										<div class="input-group top-margin-small">
+										  <span class="input-group-addon" id="sizing-addon2"><span style="padding-left:0px;padding-right:0px;">@</span></span>
+										  <input type="email" class="form-control" placeholder="Email Address" name="contact_request[email]" aria-describedby="sizing-addon2" autocomplete="off" required>
+										</div>
+										<div class="input-group top-margin-small">
+										  <span class="input-group-addon"><i class='fa fa-comment-o' style="padding-left:1px;padding-right:0px;"></i></span>
+										  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="5"></textarea>
+										</div>
 									</div>
-								<% end %>
-							</div>
+									<%= render "shared/spamcatcher_field" %>
+									<%= f.button "Send Message", data: { disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." }, class: "btn btn-default btn-block top-margin-small" %>
+								</div>
+							<% end %>
 						</div>
-
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row bottom-margin">
+			<div class="col-md-12">
+				<div class="box center">
+					<div class="content" style="padding-top:20px; padding-bottom:20px;">
+						<%= link_to "https://twitter.com/petejabbour", target: "_blank", class: "white-link", title: "Twitter" do %>
+							<i class="fa fa-twitter fa-3x" style="margin-right:40px;"></i>
+						<% end %>
+						<%= link_to "https://www.facebook.com/peter.jabbour.9", target: "_blank", class: "white-link", title: "Facebook" do %>
+							<i class="fa fa-facebook fa-3x" style="margin-right:40px;"></i>
+						<% end %>
+						<%= link_to "https://www.linkedin.com/in/peterjabbour", target: "_blank", class: "white-link", title: "Linkedin" do %>
+							<i class="fa fa-linkedin fa-3x" style="margin-right:40px;"></i>
+						<% end %>
+						<%= link_to "https://github.com/jabbs", target: "_blank", class: "white-link", title: "Github" do %>
+							<i class="fa fa-github fa-3x"></i>
+						<% end %>
 					</div>
 				</div>
 			</div>
