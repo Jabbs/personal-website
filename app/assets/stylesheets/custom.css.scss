@@ -32,8 +32,9 @@ $linkColor: #686868;
 }
 
 /* Bootstrap Overrides */
-* { border-radius: 0 !important; }
-.input-group, .form-group {margin:0px; padding:0px;}
+//* { border-radius: 0 !important; }
+input, select, textarea, .btn {border-radius: 0; }
+.input-group, .form-group {margin:0px; padding:0px;border-radius: 0;}
 .alert {margin-bottom:0px; border-radius:0px;}
 button {margin:0px;}
 
@@ -96,7 +97,7 @@ a.grey-light {color: lighten($grey_dark, 20%);}
 /* Universal */
 body {
   color: $body_grey;
-  background: $white;
+  background: $grey;
   font-family: sans-serif;
 	font-weight:300;
 }
@@ -225,6 +226,7 @@ a.highlight-link-bubble {
 
 #banner {
   background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm.jpg");
+	background-repeat: no-repeat;
   min-height: 1500px;
 }
 li { border-bottom: 3px solid transparent; }
