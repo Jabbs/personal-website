@@ -82,11 +82,6 @@ a.grey-light {color: lighten($grey_dark, 20%);}
 .tw-color {color: $tw_color;}
 .gp-color {color: $gp_color;}
 .yellow-background { background: $yellow; }
-.red-background { background: $red; }
-.green-background { background: $green_dark; }
-.orange-background { background: $orange; }
-.light-orange-background { background: $light_orange; }
-.grey-background { background: $grey_dark; }
 .grey-light-background { background: $grey; }
 .blue-hr { border-top: 1px solid $blue; border-bottom: 1px solid $blue; }
 .grey-hr { border-top: 1px solid $grey_dark; border-bottom: 1px solid $grey_dark; }
@@ -95,6 +90,12 @@ a.grey-light {color: lighten($grey_dark, 20%);}
 .grey-background-shell {background: $grey; padding: 20px;}
 
 /* Universal */
+.active, a {
+	color: darken($grey, 20%); 
+	text-decoration: none;
+	&:hover { color: black; }
+}
+
 body {
   color: $body_grey;
   background: $grey;
@@ -119,7 +120,7 @@ h5, h6 { font-family: sans-serif; font-style:italic}
 .no-bottom-margin { margin-bottom: 0px; }
 .no-margin { margin: 0px; }
 .bottom-margin-small { margin-bottom: 10px;}
-.bottom-margin { margin-bottom:20px; }
+.bottom-margin { margin-bottom:80px; }
 .bottom-padding { padding-bottom:20px; }
 .bottom-padding-small { padding-bottom:10px; }
 .top-padding-small { padding-top:10px; }
@@ -200,7 +201,6 @@ a.highlight-link-bubble {
 .bottom-border-dark { border-bottom: 2px solid $grey_dark; }
 .bottom-border { border-bottom: 2px solid $grey; }
 .bottom-border-thin { border-bottom: 1px solid $grey; }
-.box { border: 1px solid $grey; padding: 10px; @include rounded_border; background: $white; }
 .silent { color: $grey; }
 .circle-image {
 	-webkit-border-radius: 15em;
@@ -212,7 +212,6 @@ a.highlight-link-bubble {
 
 .box {
 	border: none;
-	padding: 0px;
 	background: $grey;
 	color: $white;
 	border-radius: 0;
@@ -224,29 +223,89 @@ a.highlight-link-bubble {
 .box.services-box { background: $blue; }
 .box.lightgrey { background: $grey; color: $white; }
 
+.chevron {
+	background: $green;
+	height:382px;
+	padding:177px 0px 0px 23.75px;
+	&:hover {
+		cursor: pointer;
+		background: darken($green, 10%);
+	}
+}
+
 #banner {
   background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm.jpg");
 	background-repeat: no-repeat;
   min-height: 1500px;
 }
 li { border-bottom: 3px solid transparent; }
-li:hover {}
+li:hover { color: black;}
 
-.line-about { border-color: $green; }
-.line-portfolio { border-color: $orange; }
-.line-services { border-color: $blue; }
+.line-about, .li-about.active {
+	border-color: $red;
+	transition: border-color .5s ease-in-out;
+	cursor: pointer;
+	color: black;
+	a {color: black;}
+	a:hover {text-decoration:none;}
+}
+.line-portfolio, .li-portfolio.active { 
+	border-color: $green; 
+	transition: border-color .5s ease-in-out;
+	cursor: pointer;
+	color: black;
+	a {color: black;}
+	a:hover {text-decoration:none;}
+}
+.line-services, .li-services.active { 
+	border-color: $blue; 
+	transition: border-color .5s ease-in-out;
+	cursor: pointer;
+	color: black;
+	a {color: black;}
+	a:hover {text-decoration:none;}
+}
+.line-contact, .li-contact.active { 
+	border-color: $orange; 
+	transition: border-color .5s ease-in-out;
+	cursor: pointer;
+	color: black;
+	a {color: black;}
+	a:hover {text-decoration:none;}
+}
+
+.blue-background { background: $blue; }
+.red-background { background: $red; }
+.green-background { background: $green; }
+.orange-background { background: $orange; }
+.grey-background { background: $grey; }
+.white-background { background: $white; color: $grey; }
 
 
+#map {
+	border: 5px solid $orange;
+}
+.img-pete {
+	border: 5px solid $white;
+}
+.box-main {
+	border: 5px solid $white;
+	padding: 10px;
+}
 
-
-
-
-
-
-
-
-
-
+.box-height {
+	height:382px;
+	padding:20px;
+}
+.box-green {
+	border: 5px solid $green;
+}
+.box-red {
+	border: 5px solid $red;
+}
+.box-blue {
+	border: 5px solid $blue;
+}
 
 
 

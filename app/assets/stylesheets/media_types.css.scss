@@ -2,27 +2,29 @@
 @media (min-width: 1200px) {
 	.remove-gutter-right-desktop { padding-right:0px; }
 	.remove-gutter-left-desktop { padding-left:0px; }
-
+	.box-main { height: 165px; padding: 10px; }
 }
 
 /* Medium desktop */
 @media (min-width: 992px) and (max-width: 1199px) {
 	.remove-gutter-right-desktop { padding-right:0px; }
 	.remove-gutter-left-desktop { padding-left:0px; }
-
+	.box-main { height: 131.656px; padding: 10px;  }
 }
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
 	.remove-gutter-right-desktop { padding-right:15px; }
 	.remove-gutter-left-desktop { padding-left:15px; }
-	
+	.box-main { height: 95px; font-size: 90%; padding: 5px;  }
+	#map {margin-bottom: 40px;}
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	.remove-gutter-right-desktop { padding-right:15px; }
 	.remove-gutter-left-desktop { padding-left:15px; }
+	#map {margin-bottom: 40px;}
 }
  
 /* Landscape phones and down */

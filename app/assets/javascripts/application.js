@@ -38,5 +38,11 @@ $(function() {
 	$(".li-services").mouseleave(function(){
 		$(this).removeClass("line-services");
 	});
+	$(".li-contact").mouseenter(function(){
+		$(this).addClass("line-contact");
+	});
+	$(".li-contact").mouseleave(function(){
+		$(this).removeClass("line-contact");
+	});
 	
 });

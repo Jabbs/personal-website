@@ -1,6 +1,18 @@
 class StaticPagesController < ApplicationController
   
-  def home
+  def about
+    
+  end
+  
+  def portfolio
+    
+  end
+  
+  def services
+    
+  end
+  
+  def contact
     @contact_request = ContactRequest.new
     @map_latitude = 41.9060000
     @map_longitude = -87.6967777
