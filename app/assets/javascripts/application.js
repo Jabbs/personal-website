@@ -45,4 +45,45 @@ $(function() {
 		$(this).removeClass("line-contact");
 	});
 	
+	$("#chevron-wts").click(function() {
+		$("#caw").hide();
+		$("#chevron-meh").hide();
+		$("#chevron-wts").hide();
+		$("#chevron-caw").show();
+		$("#chevron-bit").show();
+		$("#wts").fadeIn(400); 
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 });

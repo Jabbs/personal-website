@@ -275,6 +275,18 @@ li:hover { color: black;}
 	a:hover {text-decoration:none;}
 }
 
+.square {
+	display: inline-block;
+	background: $grey;
+	height: 30px;
+	width: 30px;
+	margin-right:3px;
+}
+
+.square-on {
+	background: $green;
+}
+
 .blue-background { background: $blue; }
 .red-background { background: $red; }
 .green-background { background: $green; }
@@ -320,8 +332,14 @@ li:hover { color: black;}
 	h1 { font-size: 300%; text-shadow: 1px 1px $white; font-family: 'ABeeZee', sans-serif; }
 }
 
+.portfolio-item {
+	font-size: 80%;
+}
 
-
+.portfolio-content {
+	padding-top: 80px;
+	text-align: center;
+}
 
 
 
