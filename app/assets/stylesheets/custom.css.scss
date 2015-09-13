@@ -1,5 +1,6 @@
 $linkColor: #686868;
 @import "bootstrap";
+@import url('//fonts.googleapis.com/css?family=ABeeZee:400,400italic');
 
 /* MIXINS */
 @mixin rounded_border_lg {
@@ -224,25 +225,25 @@ a.highlight-link-bubble {
 .box.lightgrey { background: $grey; color: $white; }
 
 .chevron {
-	background: $green;
+	background: lighten($grey, 10%);
 	height:382px;
 	padding:177px 0px 0px 23.75px;
 	&:hover {
 		cursor: pointer;
-		background: darken($green, 10%);
+		background: lighten($grey, 5%);
 	}
 }
 
 #banner {
-  background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm.jpg");
+  background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm-cropped.jpg");
 	background-repeat: no-repeat;
-  min-height: 1500px;
+  min-height: 1200px;
 }
 li { border-bottom: 3px solid transparent; }
 li:hover { color: black;}
 
 .line-about, .li-about.active {
-	border-color: $red;
+	border-color: $green;
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -258,7 +259,7 @@ li:hover { color: black;}
 	a:hover {text-decoration:none;}
 }
 .line-services, .li-services.active { 
-	border-color: $blue; 
+	border-color: $green; 
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -266,7 +267,7 @@ li:hover { color: black;}
 	a:hover {text-decoration:none;}
 }
 .line-contact, .li-contact.active { 
-	border-color: $orange; 
+	border-color: $green; 
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -279,11 +280,12 @@ li:hover { color: black;}
 .green-background { background: $green; }
 .orange-background { background: $orange; }
 .grey-background { background: $grey; }
-.white-background { background: $white; color: $grey; }
+.grey-light-background { background: lighten($grey, 10%); }
+.white-background { background: $white; color: darken($grey, 20%); }
 
 
 #map {
-	border: 5px solid $orange;
+	border: 5px solid lighten($grey, 10%);
 }
 .img-pete {
 	border: 5px solid $white;
@@ -294,8 +296,10 @@ li:hover { color: black;}
 }
 
 .box-height {
-	height:382px;
-	padding:20px;
+	min-height:382px;
+	padding:30px 80px;
+	font-size: 120%;
+	line-height: 135%;
 }
 .box-green {
 	border: 5px solid $green;
@@ -307,7 +311,14 @@ li:hover { color: black;}
 	border: 5px solid $blue;
 }
 
-
+.box-transparent {
+	background: transparent;
+	border: 5px solid transparent;
+	color: $grey;
+	a { color: $grey; }
+	a:hover { text-decoration: none; }
+	h1 { font-size: 300%; text-shadow: 1px 1px $white; font-family: 'ABeeZee', sans-serif; }
+}
 
 
 

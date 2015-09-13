@@ -2,10 +2,10 @@
 	<div class="col-md-12">
 		<div class="row">
 			<div class="col-md-8 remove-gutter-right-desktop">
-				<%= render "shared/map", height: "300px" %>
+				<%= render "shared/map", height: "382px" %>
 			</div>
 			<div class="col-md-4 remove-gutter-left-desktop">
-				<div class="box orange-background" style="height: 300px;">
+				<div class="box grey-light-background" style="height: 382px;">
 					<%= form_for @contact_request do |f| %>
 						<div class="content" style="padding:25px 20px 20px 20px;">
 							<div class="form-group">
@@ -19,7 +19,7 @@
 								</div>
 								<div class="input-group top-margin-small">
 								  <span class="input-group-addon"><i class='fa fa-comment-o' style="padding-left:1px;padding-right:0px;"></i></span>
-								  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="5"></textarea>
+								  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="9"></textarea>
 								</div>
 							</div>
 							<%= render "shared/spamcatcher_field" %>
