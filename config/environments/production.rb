@@ -10,16 +10,16 @@ Rails.application.configure do
   # Gmail mailer configuration
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => 'smtp.sendgrid.net',
+    :address              => 'smtp.gmail.net',
     :port                 => 587,
-    :domain               => 'petejabbour.com',
+    :domain               => 'www.petejabbour.com',
     :user_name            => ENV['GMAIL_USERNAME'],
     :password             => ENV['GMAIL_PASSWORD'],
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 
   # Set the default host option for mailer
-  config.action_mailer.default_url_options = { :host => 'petejabbour.com' }
+  config.action_mailer.default_url_options = { :host => 'www.petejabbour.com' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

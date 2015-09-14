@@ -1,7 +1,8 @@
 module ApplicationHelper
   
   def social_meta_tags
-    title = "Pete Jabbour | Technology Consultant & Full-Stack Engineer"
+    title = title = content_for?(:title) ? strip_tags(content_for(:title)).html_safe  : "Pete Jabbour | Technology Consultant & Full-Stack Engineer"
+    title = title.strip
     description = "Chicago-based technology consultant, web developer, and web designer. UX/UI, HTML/CSS, Javascript, AngularJS, PostgreSQL, Ruby on Rails, Ruby, R, and Golang"
     image = "//s3.amazonaws.com/petejabbour-website/pete_jabbour.jpg"
     content_tag(:title, title) +
