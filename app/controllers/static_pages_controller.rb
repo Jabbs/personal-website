@@ -14,8 +14,8 @@ class StaticPagesController < ApplicationController
   
   def contact
     @contact_request = ContactRequest.new
-    @map_latitude = 41.9060000
-    @map_longitude = -87.6967777
+    @map_latitude = 41.9130000
+    @map_longitude = -87.6667777
     @locations = Location.all
     @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
       marker.lat location.latitude

@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-md-1">
+	<div class="col-md-1 col-sm-1 col-xs-12">
 		<div class="box chevron" id="chevron-l-car0">
 			<i class="fa fa-chevron-left fa-2x"></i>
 		</div>
@@ -22,24 +22,34 @@
 			<i class="fa fa-chevron-left fa-2x"></i>
 		</div>
 	</div>
-	<div class="col-md-10" style="padding-left:0px;padding-right:0px;">
+	<div class="col-md-10 col-sm-10 col-xs-12" style="padding-left:0px;padding-right:0px;">
 		<div class="box box-height white-background">
 			
 			<div class="portfolio-item" id="car1">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-caw.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
-								<div style="position:relative; top:20px;">
-									<%= link_to "http://www.civicartworks.com", target: "_blank" do %>
-										<%= image_tag "//s3.amazonaws.com/caw-prod/logos/civic_art_works_logo.png", alt: "Civic ArtWorks", title: "Civic ArtWorks" %>
-									<% end %>
-								</div>
+								<%= link_to "http://www.civicartworks.com", target: "_blank" do %>
+									<%= image_tag "//s3.amazonaws.com/caw-prod/logos/civic_art_works_logo.png", alt: "Civic ArtWorks", title: "Civic ArtWorks", style: "max-width:240px;position:relative; top:20px;" %>
+								<% end %>
 							</div>
 							<p>Lead Developer and Designer</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p>
+								Civic ArtWorks is a community engagement application for neighborhood planning and development. 
+								I've been part of this project from the beginning and developed the first version of the app
+								while at <%= link_to "Impact Engine", "http://theimpactengine.com/", target: "_blank" %>. It has
+								experienced much growth since that time.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -47,19 +57,27 @@
 			
 			<div class="portfolio-item" id="car2" style="display:none;">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-hc.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
-								<div style="position:relative; top:0px;">
-									<%= link_to "http://www.huntclub.co/", target: "_blank" do %>
-										<%= image_tag "//s3.amazonaws.com/petejabbour-website/huntclub_logo.png", alt: "Hunt Club", title: "Hunt Club" %>
-									<% end %>
-								</div>
+								<%= link_to "http://www.huntclub.co/", target: "_blank" do %>
+									<%= image_tag "//s3.amazonaws.com/petejabbour-website/huntclub_logo.png", alt: "Hunt Club", title: "Hunt Club", style: "width:65px;position:relative; top:0px;" %>
+								<% end %>
 							</div>
-							<p>Role: Web Developer</p>
+							<p>Web Development</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p>
+								Hunt Club improves staffing by crowdsourcing job candidates through influencer referrals rather than recruiters.
+								I assisted the CTO in the development of their backend dashboards, candidate sourcing and messaging systems.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -67,17 +85,29 @@
 			
 			<div class="portfolio-item" id="car3" style="display:none;">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-ts.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
 								<%= link_to "http://www.trip-sharing.com/", target: "_blank" do %>
-									<%= image_tag "//s3.amazonaws.com/petejabbour-website/trip-sharing-logo-white.png", alt: "Tripsharing", title: "Tripsharing" %>
+									<%= image_tag "//s3.amazonaws.com/petejabbour-website/trip-sharing-logo-white.png", alt: "Tripsharing", title: "Tripsharing", style: "max-width:240px;" %>
 								<% end %>
 							</div>
-							<p>Role: Web Developer</p>
+							<p>Creator / Developer / Designer</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p>
+								Tripsharing is an app that matches travelers together from across the world.
+								Traveling abroad brings people close together and 
+								friendship bonds can be formed.
+								Create your own or find trips to join within the app.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -85,19 +115,28 @@
 			
 			<div class="portfolio-item" id="car4" style="display:none;">
 				<div class="row">
-					<div class="col-md-6">
-						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-ask.png", class: "img-responsive" %>
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-lm.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
 								<div style="position:relative; top:10px;">
-									<%= link_to "http://www.askandoffer.co/", target: "_blank" do %>
-										<%= image_tag "//s3.amazonaws.com/petejabbour-website/askandoffer_logo.png", alt: "Ask&Offer", title: "Ask&Offer" %>
+									<%= link_to "https://learnmetrics.com/", target: "_blank" do %>
+										<%= image_tag "//s3.amazonaws.com/petejabbour-website/lm-logo.png", alt: "Learnmetrics", title: "Learnmetrics" %>
 									<% end %>
 								</div>
 							</div>
-							<p>Role: Lead Developer</p>
+							<p>Web Development &amp; Data Analytics</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p style="margin-top:30px;">
+								Learnmetrics, a data analysis platform, collects, connects and analyzes school data and provides educators with metrics and analytics.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -105,17 +144,26 @@
 			
 			<div class="portfolio-item" id="car5" style="display:none;">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-eve.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
 								<div style="position:relative; top:20px;">
 									<%= image_tag "//s3.amazonaws.com/petejabbour-website/everybranch_logo.png", alt: "EveryBranch", title: "EveryBranch" %>
 								</div>
 							</div>
-							<p>Role: Lead Developer</p>
+							<p>Web Development &amp; Design</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p>
+								Meet Project Sheldon, a 2012 IMLS Sparks! Ignition Grant-funded app combining event planning, participant feedback, and social media in an accessible way to engage libraries more deeply with their communities.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -123,17 +171,27 @@
 			
 			<div class="portfolio-item" id="car6" style="display:none;">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-bit.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
 								<div style="position:relative; top:20px;">
 									<%= image_tag "//s3.amazonaws.com/petejabbour-website/bitbio_logo.png", alt: "BitBio", title: "BitBio" %>
 								</div>
 							</div>
-							<p>Role: Lead Developer</p>
+							<p>Creator / Developer / Designer</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p>
+								A free scientific marketplace for researchers, hospitals, or genome centers to connect with the
+								vendors or resources that match their needs.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -141,25 +199,34 @@
 			
 			<div class="portfolio-item" id="car7" style="display:none;">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-wts.png", class: "img-responsive" %>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="portfolio-content">
 							<div class="portfolio-logo">
 								<div style="position:relative; top:20px;">
 									<%= image_tag "//s3.amazonaws.com/petejabbour-website/waytosettle_logo.png", alt: "WayToSettle", title: "WayToSettle" %>
 								</div>
 							</div>
-							<p>Role: Lead Developer</p>
+							<p>Lead Developer</p>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-description">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<div class="center">
+							<p>
+								WayToSettle is a fast, fair, and inexpensive way to settle disputes online. The web app allows users to file claims, upload case documents, dispute claims, come to a settlement, and pay/settle with a credit card.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-
+			
 		</div>
 	</div>
-	<div class="col-md-1">
+	<div class="col-md-1 col-sm-1 col-xs-12">
 		<div class="box chevron" id="chevron-r-car2">
 			<i class="fa fa-chevron-right fa-2x"></i>
 		</div>

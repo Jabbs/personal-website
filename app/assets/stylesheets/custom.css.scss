@@ -312,7 +312,7 @@ li:hover { color: black;}
 
 .box-height {
 	min-height:382px;
-	padding:30px 80px;
+//	padding:30px 80px;
 	font-size: 110%;
 	line-height: 135%;
 }
@@ -333,6 +333,7 @@ li:hover { color: black;}
 	a { color: $grey; }
 	a:hover { text-decoration: none; }
 	h1 { font-size: 300%; text-shadow: 1px 1px $white; font-family: 'ABeeZee', sans-serif; }
+	h2 { font-size: 200%; text-shadow: 1px 1px $white; font-family: 'ABeeZee', sans-serif; }
 }
 
 .portfolio-item {
@@ -340,18 +341,50 @@ li:hover { color: black;}
 }
 
 .portfolio-content {
-	text-align: center;
+//	text-align: center;
 	font-size:120%;
 }
 
 .portfolio-logo {
-	margin-top: 40px;
+	margin-top: 80px;
 	height: 80px;
 }
 
+.transparent_background {
+	width:100%;
+	height:160px;
+	position:relative;
+	z-index: 0;
+	top:-120px;
+}
+.transparent_background:after {
+	content:'';
+	background: image-url("grey_block.png");
+	width:100%;
+	height:150px;
+	position:absolute;
+	z-index:-1;
+	top:0;
+	left:0;
+	opacity:0.7;
+}
+.transparent_background_child {
+	overflow: hidden;
+	color: $white;
+	line-height:115%;
+	::-webkit-input-placeholder { /* WebKit browsers */ color:    lighten($grey_dark, 20%); }
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */   color:    lighten($grey_dark, 20%); opacity:  1; }
+	::-moz-placeholder { /* Mozilla Firefox 19+ */			color:    lighten($grey_dark, 20%); opacity:  1; }
+	:-ms-input-placeholder { /* Internet Explorer 10+ */color:    lighten($grey_dark, 20%); }
+	a {color: $white;}
+}
 
+.portfolio-description {
+	position:relative;
+	top:-20px;
+}
 
-
+.fa-twitter, .fa-facebook, .fa-linkedin { margin-right:120px; }
 
 
 

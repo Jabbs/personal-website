@@ -3,6 +3,9 @@
 	.remove-gutter-right-desktop { padding-right:0px; }
 	.remove-gutter-left-desktop { padding-left:0px; }
 	.box-main { height: 165px; padding: 10px; }
+	.box-transparent { h1 {margin-top:3.6%;} }
+	.box-transparent { h2.portfolio {margin-top:4%;} }
+	.box-transparent { h2.contact {margin-top:4%;} }
 }
 
 /* Medium desktop */
@@ -10,6 +13,10 @@
 	.remove-gutter-right-desktop { padding-right:0px; }
 	.remove-gutter-left-desktop { padding-left:0px; }
 	.box-main { height: 131.656px; padding: 10px;  }
+	.chevron { padding:177px 0px 0px 16px; }
+	.box-transparent { h1 {margin-top:1.6%;} }
+	.box-transparent { h2.portfolio {margin-top:1%;} }
+	.box-transparent { h2.contact {margin-top:3%;} }
 }
  
 /* Portrait tablet to landscape and desktop */
@@ -17,18 +24,42 @@
 	.remove-gutter-right-desktop { padding-right:15px; }
 	.remove-gutter-left-desktop { padding-left:15px; }
 	.box-main { height: 95px; font-size: 90%; padding: 5px;  }
+	.chevron { padding:177px 0px 0px 6px; }
 	#map {margin-bottom: 40px;}
+	.box-transparent { h1 {font-size:200%; margin-top:.6%;} }
+	.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
+	.box-transparent { h2.contact {font-size:140%; margin-top:2%;} }
+	.portfolio-description {margin-top:40px;}
+	.portfolio-logo {margin-top: 50px;}
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	.remove-gutter-right-desktop { padding-right:15px; }
 	.remove-gutter-left-desktop { padding-left:15px; }
+	.chevron { height: 1px; padding:0px; }
 	#map {margin-bottom: 40px;}
+	.box-transparent { h1 {font-size:180%; margin-top:5%;} p {font-size:85%;} }
+	.box-transparent { h2.portfolio {font-size:140%; margin-top:5%;} }
+	.box-transparent { h2.contact {font-size:140%; margin-top:6%;} }
+	.portfolio-logo {margin-top: 34px;}
+	.portfolio-content p { font-size:85%; }
+	.portfolio-description {margin-top:40px; padding: 10px;}
+	.footer {font-size: 70%;}
+	.fa-twitter, .fa-facebook, .fa-linkedin { margin-right:25px; }
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.remove-gutter-right-desktop { padding-right:15px; }
 	.remove-gutter-left-desktop { padding-left:15px; }
+	.box-transparent { h1 {font-size:150%; margin-top:0px;} p {font-size:85%;} }
+	.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
+	.box-transparent { h2.contact {font-size:140%; margin-top:0%;} }
+	.portfolio-description {margin-top:40px;}
+	.portfolio-logo {margin-top: 30px;}
+	.portfolio-content p { position:relative; top:-20px; }
+	.portfolio-logo img, .portfolio-logo a img { width: 100px;}
+	.footer {font-size: 70%;}
+	.fa-twitter, .fa-facebook, .fa-linkedin { margin-right:25px; }
 }

@@ -1,18 +1,30 @@
 <div class="row">
 	<div class="col-md-12">						
 		<div class="row">
-			<div class="col-md-2 col-sm-2">
+			<div class="col-md-2 col-sm-2 col-xs-3">
 				<div class="bottom-margin">
 					<%= link_to root_path do %>
 						<%= image_tag "//s3.amazonaws.com/petejabbour-website/pete_jabbour.jpg", class: "img-responsive img-circle", alt: "Pete Jabbour", title: "Pete Jabbour" %>
 					<% end %>
 				</div>
 			</div>
-			<div class="col-md-10 col-sm-10">
+			<div class="col-md-10 col-sm-10 col-xs-9">
 				<div class="box box-transparent bottom-margin">
-					<div class="content" >
-						<h1 style="margin-top:3%;"><%= link_to "PETEJABBOUR.COM", root_path, class: "white-link", title: "Pete Jabbour" %></h1>
-						<p style="color: black;">Technology Consultant &amp; Full-Stack Engineer</p>
+					<div class="content">
+						<% path = request.path.split("/")[1] %>
+						<% if path == "portfolio" %>
+							<h2 class="portfolio">
+								An incomplete list of projects in various stages (beta, startup, enterprise-level software) 
+								across many different industries...
+							</h2>
+						<% elsif path == "contact" %>
+							<h2 class="contact">
+								Please reach out! You can typically find me in River North or Logan Square.
+							</h2>
+						<% else %>
+							<h1><%= link_to "PETEJABBOUR.COM", root_path, class: "white-link", title: "Pete Jabbour" %></h1>
+							<p style="color: black;">Technology Consultant &amp; Full-Stack Engineer</p>
+						<% end %>
 					</div>
 				</div>
 			</div>
