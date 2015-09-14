@@ -156,6 +156,7 @@ a.grey-link { color:darken($grey, 10%); &:hover {text-decoration:none;color: $gr
 a.grey-dark-link { color: $grey_dark; &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
 a.grey-darkened-link { color: darken($grey_dark, 10%); &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
 a.white-link{ color: $white; }
+a.white-link:hover{ text-decoration: none; }
 a.orange { color: $orange; }
 a.orange:hover { color: darken($orange, 10%); }
 a.orange-like-link { color: $orange; }
