@@ -121,7 +121,7 @@ h5, h6 { font-family: sans-serif; font-style:italic}
 .no-bottom-margin { margin-bottom: 0px; }
 .no-margin { margin: 0px; }
 .bottom-margin-small { margin-bottom: 10px;}
-.bottom-margin { margin-bottom:80px; }
+.bottom-margin { margin-bottom:60px; }
 .bottom-padding { padding-bottom:20px; }
 .bottom-padding-small { padding-bottom:10px; }
 .top-padding-small { padding-top:10px; }
@@ -281,10 +281,13 @@ li:hover { color: black;}
 	height: 30px;
 	width: 30px;
 	margin-right:3px;
+	cursor: pointer;
+	&:hover {background: lighten($grey, 5%);}
 }
 
 .square-on {
 	background: $green;
+	&:hover {background: $green;}
 }
 
 .blue-background { background: $blue; }
@@ -310,7 +313,7 @@ li:hover { color: black;}
 .box-height {
 	min-height:382px;
 	padding:30px 80px;
-	font-size: 120%;
+	font-size: 110%;
 	line-height: 135%;
 }
 .box-green {
@@ -337,8 +340,13 @@ li:hover { color: black;}
 }
 
 .portfolio-content {
-	padding-top: 80px;
 	text-align: center;
+	font-size:120%;
+}
+
+.portfolio-logo {
+	margin-top: 40px;
+	height: 80px;
 }
 
 

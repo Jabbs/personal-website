@@ -1,5 +1,5 @@
 <% route = request.path.split("/")[1] %>
-<div class="row" style="margin-top:20px;margin-bottom:40px;">
+<div class="row" style="margin-top:20px;margin-bottom:20px;">
 	<div class="col-md-12">
 		<div class="pull-right">
 			<ul class="list-unstyled list-inline" style="padding-left:5px;">
@@ -9,9 +9,11 @@
 				<li class="li-portfolio <%= route == "portfolio" ? "active" : "" %>" style="margin-right:9px;margin-left:9px;">
 					<%= link_to "Portfolio", portfolio_path %>
 				</li>
+				<!-- 
 				<li class="li-services <%= route == "services" ? "active" : "" %>" style="margin-right:9px;margin-left:9px;">
 					<%= link_to "Services", services_path %>
 				</li>
+				 -->
 				<li class="li-contact <%= route == "contact" ? "active" : "" %>" style="margin-right:0px;margin-left:9px;">
 					<%= link_to "Contact", contact_path, 'data-no-turbolink' => true %>
 				</li>
