@@ -31,3 +31,4 @@ gem 'will_paginate-bootstrap'
 gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'gmaps4rails'
 gem 'rails_admin'
+gem "scrollreveal-rails"

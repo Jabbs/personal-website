@@ -14,11 +14,14 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap.min
+//= require scrollReveal
 //= require gmaps/google
 //= require turbolinks
 //= require_tree .
 
 $(function() {
+	
+	window.scrollReveal = new scrollReveal();
 	
 	$(".li-about").mouseenter(function(){
 		$(this).addClass("line-about");
