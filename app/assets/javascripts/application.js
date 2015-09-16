@@ -21,6 +21,8 @@
 
 $(function() {
 	
+	$("h2.contact").show(500)
+	
 	window.scrollReveal = new scrollReveal();
 	
 	$(".li-about").mouseenter(function(){
