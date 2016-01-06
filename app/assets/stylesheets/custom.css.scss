@@ -224,19 +224,23 @@ a.highlight-link-bubble {
 .box.portfolio-box { background: $orange; }
 .box.services-box { background: $blue; }
 .box.lightgrey { background: $grey; color: $white; }
+.main-box {
+	position:relative; 
+	top: -40px;
+}
 
 .chevron {
-	background: lighten($grey, 10%);
+	background: lighten($dark_blue, 10%);
 	height:382px;
 	padding:177px 0px 0px 23.75px;
 	&:hover {
 		cursor: pointer;
-		background: lighten($grey, 5%);
+		background: lighten($dark_blue, 5%);
 	}
 }
 
 #banner {
-  background-image: url("//s3.amazonaws.com/petejabbour-website/vietnam-sm-cropped.jpg");
+  background-image: url("//s3.amazonaws.com/petejabbour-website/chicago.jpg");
 	background-repeat: no-repeat;
   min-height: 1200px;
 }
@@ -244,7 +248,7 @@ li { border-bottom: 3px solid transparent; }
 li:hover { color: black;}
 
 .line-about, .li-about.active {
-	border-color: $green;
+	border-color: $dark_blue;
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -252,7 +256,7 @@ li:hover { color: black;}
 	a:hover {text-decoration:none;}
 }
 .line-portfolio, .li-portfolio.active { 
-	border-color: $green; 
+	border-color: $dark_blue; 
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -260,7 +264,7 @@ li:hover { color: black;}
 	a:hover {text-decoration:none;}
 }
 .line-services, .li-services.active { 
-	border-color: $green; 
+	border-color: $dark_blue; 
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -268,7 +272,7 @@ li:hover { color: black;}
 	a:hover {text-decoration:none;}
 }
 .line-contact, .li-contact.active { 
-	border-color: $green; 
+	border-color: $dark_blue; 
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -287,11 +291,11 @@ li:hover { color: black;}
 }
 
 .square-on {
-	background: $green;
-	&:hover {background: $green;}
+	background: $dark_blue;
+	&:hover {background: $dark_blue;}
 }
 
-.blue-background { background: $blue; }
+.blue-background { background: $dark_blue; }
 .red-background { background: $red; }
 .green-background { background: $green; }
 .orange-background { background: $orange; }
@@ -330,11 +334,11 @@ li:hover { color: black;}
 .box-transparent {
 	background: transparent;
 	border: 5px solid transparent;
-	color: $grey;
-	a { color: $grey; }
+	color: $dark_blue;
+	a { color: $dark_blue; }
 	a:hover { text-decoration: none; }
-	h1 { font-size: 300%; text-shadow: 1px 1px $white; font-family: 'ABeeZee', sans-serif; }
-	h2 { font-size: 200%; text-shadow: 1px 1px $white; font-family: 'ABeeZee', sans-serif; }
+	h1 { font-size: 300%; font-family: 'ABeeZee', sans-serif; }
+	h2 { font-size: 200%; font-family: 'ABeeZee', sans-serif; }
 }
 
 .portfolio-item {
@@ -383,6 +387,7 @@ li:hover { color: black;}
 .portfolio-description {
 	position:relative;
 	top:-20px;
+	font-size: 120%;
 }
 
 .fa-twitter, .fa-facebook, .fa-linkedin { margin-right:120px; }
