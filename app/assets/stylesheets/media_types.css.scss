@@ -47,12 +47,13 @@
 	.box-transparent { h1 {font-size:180%; margin-top:5%;} p {font-size:85%;} }
 	.box-transparent { h2.portfolio {font-size:140%; margin-top:5%;} }
 	.box-transparent { h2.contact {font-size:140%; margin-top:6%;} }
-	.portfolio-logo {margin-top: 34px;}
-	.portfolio-content p { font-size:85%; }
+	.portfolio-logo {margin-top: 34px;position:relative; right: 20px;}
+	.portfolio-content p { font-size:85%; position:relative; right: 20px;}
 	.portfolio-description {margin-top:40px; padding: 10px;}
 	.footer {font-size: 70%;}
 	.fa-twitter, .fa-facebook, .fa-linkedin { margin-right:25px; }
 	.about-box {padding: 30px 80px;}
+	.carousel-box {margin-left: 14px;margin-right:14px;}
 }
  
 /* Landscape phones and down */
