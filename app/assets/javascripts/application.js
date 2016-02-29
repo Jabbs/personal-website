@@ -20,11 +20,35 @@
 //= require_tree .
 
 $(function() {
-	
+
 	$("h2.contact").show(500)
-	
+
+	var progressHtmlWidth = $("#progress-html").data('progresswidth') + "%";
+	var progressCssWidth = $("#progress-css").data('progresswidth') + "%";
+	var progressResponsiveWidth = $("#progress-responsive").data('progresswidth') + "%";
+	var progressBootstrapWidth = $("#progress-bootstrap").data('progresswidth') + "%";
+	var progressEmberWidth = $("#progress-ember").data('progresswidth') + "%";
+	var progressAngularWidth = $("#progress-angular").data('progresswidth') + "%";
+	var progressRailsWidth = $("#progress-rails").data('progresswidth') + "%";
+	var progressRubyWidth = $("#progress-ruby").data('progresswidth') + "%";
+	var progressSwiftWidth = $("#progress-swift").data('progresswidth') + "%";
+	var progressGolangWidth = $("#progress-golang").data('progresswidth') + "%";
+	var progressSqlWidth = $("#progress-sql").data('progresswidth') + "%";
+
+	$("#progress-html").animate({ width: progressHtmlWidth }, 2000);
+	$("#progress-css").animate({ width: progressCssWidth }, 2100);
+	$("#progress-responsive").animate({ width: progressResponsiveWidth }, 2200);
+	$("#progress-bootstrap").animate({ width: progressBootstrapWidth }, 2300);
+	$("#progress-ember").animate({ width: progressEmberWidth }, 2400);
+	$("#progress-angular").animate({ width: progressAngularWidth }, 2500);
+	$("#progress-rails").animate({ width: progressRailsWidth }, 2600);
+	$("#progress-ruby").animate({ width: progressRubyWidth }, 2700);
+	$("#progress-swift").animate({ width: progressSwiftWidth }, 2800);
+	$("#progress-golang").animate({ width: progressGolangWidth }, 2900);
+	$("#progress-sql").animate({ width: progressSqlWidth }, 3000);
+
 	window.scrollReveal = new scrollReveal();
-	
+
 	$(".li-about").mouseenter(function(){
 		$(this).addClass("line-about");
 	});
@@ -49,7 +73,7 @@ $(function() {
 	$(".li-contact").mouseleave(function(){
 		$(this).removeClass("line-contact");
 	});
-	
+
 	$("#chevron-r-car2").click(function() {
 		$("#car1").hide();
 		$("#sq-car1").removeClass("square-on");
@@ -58,7 +82,7 @@ $(function() {
 		$("#chevron-r-car2").hide();
 		$("#chevron-l-car1").show();
 		$("#chevron-r-car3").show();
-		$("#car2").fadeIn(700); 
+		$("#car2").fadeIn(700);
 	});
 	$("#chevron-r-car3").click(function() {
 		$("#car2").hide();
@@ -68,7 +92,7 @@ $(function() {
 		$("#chevron-r-car3").hide();
 		$("#chevron-l-car2").show();
 		$("#chevron-r-car4").show();
-		$("#car3").fadeIn(700); 
+		$("#car3").fadeIn(700);
 	});
 	$("#chevron-r-car4").click(function() {
 		$("#car3").hide();
@@ -78,7 +102,7 @@ $(function() {
 		$("#chevron-r-car4").hide();
 		$("#chevron-l-car3").show();
 		$("#chevron-r-car5").show();
-		$("#car4").fadeIn(700); 
+		$("#car4").fadeIn(700);
 	});
 	$("#chevron-r-car5").click(function() {
 		$("#car4").hide();
@@ -88,7 +112,7 @@ $(function() {
 		$("#chevron-r-car5").hide();
 		$("#chevron-l-car4").show();
 		$("#chevron-r-car6").show();
-		$("#car5").fadeIn(700); 
+		$("#car5").fadeIn(700);
 	});
 	$("#chevron-r-car6").click(function() {
 		$("#car5").hide();
@@ -98,7 +122,7 @@ $(function() {
 		$("#chevron-r-car6").hide();
 		$("#chevron-l-car5").show();
 		$("#chevron-r-car7").show();
-		$("#car6").fadeIn(700); 
+		$("#car6").fadeIn(700);
 	});
 	$("#chevron-r-car7").click(function() {
 		$("#car6").hide();
@@ -108,9 +132,9 @@ $(function() {
 		$("#chevron-r-car7").hide();
 		$("#chevron-l-car6").show();
 		$("#chevron-r-car8").show();
-		$("#car7").fadeIn(700); 
+		$("#car7").fadeIn(700);
 	});
-	
+
 	$("#chevron-l-car1").click(function() {
 		$("#car2").hide();
 		$("#sq-car2").removeClass("square-on");
@@ -119,7 +143,7 @@ $(function() {
 		$("#chevron-r-car3").hide();
 		$("#chevron-l-car0").show();
 		$("#chevron-r-car2").show();
-		$("#car1").fadeIn(700); 
+		$("#car1").fadeIn(700);
 	});
 	$("#chevron-l-car2").click(function() {
 		$("#car3").hide();
@@ -129,7 +153,7 @@ $(function() {
 		$("#chevron-r-car4").hide();
 		$("#chevron-l-car1").show();
 		$("#chevron-r-car3").show();
-		$("#car2").fadeIn(700); 
+		$("#car2").fadeIn(700);
 	});
 	$("#chevron-l-car3").click(function() {
 		$("#car4").hide();
@@ -139,7 +163,7 @@ $(function() {
 		$("#chevron-r-car5").hide();
 		$("#chevron-l-car2").show();
 		$("#chevron-r-car4").show();
-		$("#car3").fadeIn(700); 
+		$("#car3").fadeIn(700);
 	});
 	$("#chevron-l-car4").click(function() {
 		$("#car5").hide();
@@ -149,7 +173,7 @@ $(function() {
 		$("#chevron-r-car6").hide();
 		$("#chevron-l-car3").show();
 		$("#chevron-r-car5").show();
-		$("#car4").fadeIn(700); 
+		$("#car4").fadeIn(700);
 	});
 	$("#chevron-l-car5").click(function() {
 		$("#car6").hide();
@@ -159,7 +183,7 @@ $(function() {
 		$("#chevron-r-car7").hide();
 		$("#chevron-l-car4").show();
 		$("#chevron-r-car6").show();
-		$("#car5").fadeIn(700); 
+		$("#car5").fadeIn(700);
 	});
 	$("#chevron-l-car6").click(function() {
 		$("#car7").hide();
@@ -169,9 +193,9 @@ $(function() {
 		$("#chevron-r-car8").hide();
 		$("#chevron-l-car5").show();
 		$("#chevron-r-car7").show();
-		$("#car6").fadeIn(700); 
+		$("#car6").fadeIn(700);
 	});
-	
+
 	$("#sq-car1").click(function() {
 		$("#sq-car1").addClass("square-on");
 		$("#sq-car2").removeClass("square-on");
@@ -382,35 +406,35 @@ $(function() {
 		$("#car5").hide();
 		$("#car6").hide();
 	});
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

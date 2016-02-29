@@ -32,14 +32,6 @@ $linkColor: #686868;
 	         border-radius: 15em;
 }
 
-/* Bootstrap Overrides */
-//* { border-radius: 0 !important; }
-input, select, textarea, .btn {border-radius: 0; }
-.input-group, .form-group {margin:0px; padding:0px;border-radius: 0;}
-.alert {margin-bottom:0px; border-radius:0px;}
-button {margin:0px;}
-
-
 /* Colors, Misc */
 
 // From original CAW website:
@@ -90,9 +82,22 @@ a.grey-light {color: lighten($grey_dark, 20%);}
 .bold { font-weight: bold; }
 .grey-background-shell {background: $grey; padding: 20px;}
 
+/* Bootstrap Overrides */
+//* { border-radius: 0 !important; }
+input, select, textarea, .btn {border-radius: 0; }
+.input-group, .form-group {margin:0px; padding:0px;border-radius: 0;}
+.alert {margin-bottom:0px; border-radius:0px;}
+button {margin:0px;}
+.progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+		background: $grey;
+}
+
+
 /* Universal */
 .active, a {
-	color: darken($grey, 20%); 
+	color: darken($grey, 20%);
 	text-decoration: none;
 	&:hover { color: black; }
 }
@@ -225,7 +230,7 @@ a.highlight-link-bubble {
 .box.services-box { background: $blue; }
 .box.lightgrey { background: $grey; color: $white; }
 .main-box {
-	position:relative; 
+	position:relative;
 	top: -40px;
 }
 
@@ -255,24 +260,24 @@ li:hover { color: black;}
 	a {color: black;}
 	a:hover {text-decoration:none;}
 }
-.line-portfolio, .li-portfolio.active { 
-	border-color: $dark_blue; 
+.line-portfolio, .li-portfolio.active {
+	border-color: $dark_blue;
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
 	a {color: black;}
 	a:hover {text-decoration:none;}
 }
-.line-services, .li-services.active { 
-	border-color: $dark_blue; 
+.line-services, .li-services.active {
+	border-color: $dark_blue;
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
 	a {color: black;}
 	a:hover {text-decoration:none;}
 }
-.line-contact, .li-contact.active { 
-	border-color: $dark_blue; 
+.line-contact, .li-contact.active {
+	border-color: $dark_blue;
 	transition: border-color .5s ease-in-out;
 	cursor: pointer;
 	color: black;
@@ -391,7 +396,3 @@ li:hover { color: black;}
 }
 
 .fa-twitter, .fa-facebook, .fa-linkedin { margin-right:120px; }
-
-
-
-
