@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  
+
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
 
@@ -12,14 +12,14 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => 'smtp.gmail.com',
     :port                 => 587,
-    :domain               => 'www.petejabbour.com',
+    :domain               => 'www.petejabbour.info',
     :user_name            => ENV['GMAIL_USERNAME'],
     :password             => ENV['GMAIL_PASSWORD'],
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 
   # Set the default host option for mailer
-  config.action_mailer.default_url_options = { :host => 'www.petejabbour.com' }
+  config.action_mailer.default_url_options = { :host => 'www.petejabbour.info' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
