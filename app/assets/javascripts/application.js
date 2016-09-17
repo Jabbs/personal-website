@@ -21,7 +21,14 @@
 
 $(function() {
 
-	$("h2.contact").show(500)
+	$("h2.contact").show(500);
+
+	$('.portfolio-link').click( function() {
+		$('html, body').animate({
+			scrollTop: $("#portfolio").offset().top
+		}, 800);
+	});
+
 
 	var progressHtmlWidth = $("#progress-html").data('progresswidth') + "%";
 	var progressCssWidth = $("#progress-css").data('progresswidth') + "%";

@@ -26,6 +26,14 @@ $linkColor: #686868;
 	    -moz-border-top-left-radius: 5px;
 	         border-top-left-radius: 5px;
 }
+@mixin rounded_bottom_border {
+	 -webkit-border-bottom-right-radius: 5px;
+	    -moz-border-bottom-right-radius: 5px;
+	         border-bottom-right-radius: 5px;
+	 -webkit-border-bottom-left-radius: 5px;
+	    -moz-border-bottom-left-radius: 5px;
+	         border-bottom-left-radius: 5px;
+}
 @mixin circle_border {
 	 -webkit-border-radius: 15em;
 	    -moz-border-radius: 15em;
@@ -99,7 +107,6 @@ button {margin:0px;}
 .active, a {
 	color: darken($grey, 20%);
 	text-decoration: none;
-	&:hover { color: black; }
 }
 
 body {
@@ -156,6 +163,7 @@ a.no-decoration:hover { text-decoration: none; }
 .no-right-padding {padding-right:0px;}
 .no-left-padding {padding-left:0px;}
 .no-height {height: 0px;}
+.grey-light { color: $grey_light }
 a.black-link { color:lighten(black, 10%); &:hover {text-decoration:none;color: black;} }
 a.grey-link { color:darken($grey, 10%); &:hover {text-decoration:none;color: $grey_dark;} }
 a.grey-dark-link { color: $grey_dark; &:hover {text-decoration:none;color: darken($grey_dark, 10%);} }
@@ -222,17 +230,13 @@ a.highlight-link-bubble {
 	background: $grey;
 	color: $white;
 	border-radius: 0;
-	.content { padding: 10px; }
+	.content { padding: 10px 0px; font-size: 120%; }
 	p { margin-top: 5px; }
 }
 .box.about-box { background: $green; }
 .box.portfolio-box { background: $orange; }
 .box.services-box { background: $blue; }
 .box.lightgrey { background: $grey; color: $white; }
-.main-box {
-	position:relative;
-	top: -40px;
-}
 
 .chevron {
 	background: lighten($dark_blue, 10%);
@@ -245,12 +249,8 @@ a.highlight-link-bubble {
 }
 
 #banner {
-  background-image: url("//s3.amazonaws.com/petejabbour-website/chicago.jpg");
-	background-repeat: no-repeat;
-  min-height: 1200px;
+  min-height: 600px;
 }
-li { border-bottom: 3px solid transparent; }
-li:hover { color: black;}
 
 .line-about, .li-about.active {
 	border-color: $dark_blue;
@@ -301,6 +301,7 @@ li:hover { color: black;}
 }
 
 .blue-background { background: $dark_blue; }
+.blue-light-background { background: lighten($dark_blue, 10%); }
 .red-background { background: $red; }
 .green-background { background: $green; }
 .orange-background { background: $orange; }
@@ -308,10 +309,51 @@ li:hover { color: black;}
 .grey-light-background { background: lighten($grey, 10%); }
 .white-background { background: $white; color: darken($grey, 20%); }
 
-
-#map {
-	border: 5px solid lighten($grey, 10%);
+.custom-link {
+	display: inline-block;
+	border: 2px solid $grey_light;
+	color: $grey_light;
+	padding: 5px 15px;
+	@include rounded_border;
+	&:hover {
+		cursor: pointer;
+		color: darken($grey_light, 10%);
+		border: 2px solid darken($grey_light, 10%);
+		text-decoration: none;
+	}
 }
+
+.screenshot-background {
+	height: 500px;
+	background: $white;
+	text-align: center;
+	.portfolio-logo {
+		text-align: center;
+		margin-bottom: 0px;
+		margin-top: 50px;
+	}
+}
+.portfolio-background {
+	height: 500px;
+	background: $grey_light;
+	padding: 50px 0px;
+	.tabs { display:table; margin:0 auto; }
+	h4 { font-weight: bold; }
+	.portfolio-content {
+		font-size: 150%;
+		// ul { display:table; margin:0 auto; }
+		.tab-content {
+			width: 500px;
+			height: 330px;
+			font-size: 18px;
+			padding: 40px;
+			background: $white;
+			@include rounded_bottom_border;
+		}
+		.fa-stack { margin-right: 5px; }
+	}
+}
+
 .img-pete {
 	border: 5px solid $white;
 }
@@ -321,8 +363,6 @@ li:hover { color: black;}
 }
 
 .box-height {
-	min-height:382px;
-//	padding:30px 80px;
 	font-size: 110%;
 	line-height: 135%;
 }
@@ -348,16 +388,6 @@ li:hover { color: black;}
 
 .portfolio-item {
 	font-size: 80%;
-}
-
-.portfolio-content {
-//	text-align: center;
-	font-size:120%;
-}
-
-.portfolio-logo {
-	margin-top: 80px;
-	height: 80px;
 }
 
 .transparent_background {

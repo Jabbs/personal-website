@@ -1,22 +1,12 @@
-<div class="row" style="position:relative; top: -40px;">
-	<div class="col-md-12">
-		<div class="row">
-			<div class="col-md-2 col-sm-2 col-xs-3">
-				<div class="bottom-margin">
-					<%= link_to root_path, 'data-no-turbolink' => true do %>
-						<%= image_tag "//s3.amazonaws.com/petejabbour-website/headshot", class: "img-responsive img-circle", alt: "Pete Jabbour", title: "Pete Jabbour" %>
-					<% end %>
-				</div>
-			</div>
-			<div class="col-md-10 col-sm-10 col-xs-9 hidden-xs">
-				<% if page == "portfolio" %>
-					<%= render "shared/scroll/portfolio" %>
-				<% elsif page == "about" %>
-					<%= render "shared/scroll/about" %>
-				<% elsif page == "contact" %>
-					<%= render "shared/scroll/contact" %>
-				<% end %>
-			</div>
+<div class="row">
+	<div class="col-md-3">
+		<div class="pull-right">
+			<%= link_to root_path, 'data-no-turbolink' => true do %>
+				<%= image_tag "//s3.amazonaws.com/petejabbour-website/headshot", class: "img-circle", alt: "Pete Jabbour", size: "200x200", title: "Pete Jabbour" %>
+			<% end %>
 		</div>
+	</div>
+	<div class="col-md-9">
+		<%= render "shared/scroll/about" %>
 	</div>
 </div>
