@@ -116,7 +116,7 @@ body {
 	font-weight:300;
 }
 h1, h2, h3, h4, h5, h6, p { margin: 0px; padding: 0px; }
-h5, h6 { font-family: sans-serif; font-style:italic}
+// h5, h6 { font-family: sans-serif; font-style:italic}
 .inline { display: inline; }
 .huge { font-size: 500%; line-height: 100%; }
 .large {font-size: 375%;}
@@ -223,6 +223,27 @@ a.highlight-link-bubble {
 }
 
 /* Static Pages - Home */
+.fa-long-arrow-left {
+	transition: all 0.9s ease;
+	&:hover {
+		color: $green;
+		cursor: pointer;
+	}
+}
+#new_contact_request {
+	.input-group {
+		width: 100%;
+	}
+	input {
+		border: none;
+		border-color: transparent;
+		width: 100%;
+	}
+}
+
+.contact-request-row {
+	display: none;
+}
 
 #map {
 	border: 1px solid $grey;
@@ -231,10 +252,11 @@ a.highlight-link-bubble {
 .send-to-top {
 	display: inline-block;
 	margin-top: 29px;
-}
-.send-to-top:hover {
-	cursor: pointer;
-	color: darken($white, 20%);
+	transition: all 0.9s ease;
+	&:hover {
+		cursor: pointer;
+		color: $green;
+	}
 }
 
 .box {
@@ -326,13 +348,20 @@ a.highlight-link-bubble {
 	border: 2px solid $grey_light;
 	color: $grey_light;
 	padding: 5px 15px;
+	transition: all 0.9s ease;
 	@include rounded_border;
 	&:hover {
 		cursor: pointer;
-		color: darken($grey_light, 10%);
-		border: 2px solid darken($grey_light, 10%);
+		color: $green;
+		border: 2px solid $green;
 		text-decoration: none;
 	}
+}
+
+.message-sent-link {
+	border-color: $green;
+	color: $green;
+	&:hover { cursor: default; }
 }
 
 .screenshot-background {
@@ -444,10 +473,11 @@ a.highlight-link-bubble {
 	font-size: 120%;
 }
 
-.fa-twitter, .fa-facebook, .fa-linkedin {
+.fa-twitter, .fa-facebook, .fa-linkedin, .fa-github {
 	margin-right: 8px;
+	transition: all 0.9s ease;
 	&:focus, &:active, &:hover {
 		text-decoration: none;
-		color: lighten($dark_blue, 10%);
+		color: $green;
 	}
 }

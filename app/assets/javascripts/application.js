@@ -35,6 +35,17 @@ $(function() {
 		}, 800);
 	});
 
+	$('.contact-request-link').click(function() {
+		$(".african-proverb-row").hide();
+		$(".contact-request-row").fadeIn(1000);
+		$("input.contact-request-name").focus();
+	});
+
+	$(".fa-long-arrow-left").click(function() {
+		$(".contact-request-row").hide();
+		$(".african-proverb-row").fadeIn(1000);
+	});
+
 	setTimeout(function() {
 		setInterval(function() { $('.pete-jabbour').toggleClass("cursor-border"); }, 530);
 	}, 2000);
