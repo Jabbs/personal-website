@@ -29,6 +29,15 @@ $(function() {
 		}, 800);
 	});
 
+	$('.send-to-top').click(function() {
+		$('html, body').animate({
+			scrollTop: $("html").offset().top
+		}, 800);
+	});
+
+	setTimeout(function() {
+		setInterval(function() { $('.pete-jabbour').toggleClass("cursor-border"); }, 530);
+	}, 2000);
 
 	var progressHtmlWidth = $("#progress-html").data('progresswidth') + "%";
 	var progressCssWidth = $("#progress-css").data('progresswidth') + "%";

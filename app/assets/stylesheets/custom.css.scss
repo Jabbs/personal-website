@@ -224,12 +224,25 @@ a.highlight-link-bubble {
 
 /* Static Pages - Home */
 
+#map {
+	border: 1px solid $grey;
+}
+
+.send-to-top {
+	display: inline-block;
+	margin-top: 29px;
+}
+.send-to-top:hover {
+	cursor: pointer;
+	color: darken($white, 20%);
+}
+
 .box {
 	border: none;
 	background: $grey;
 	color: $white;
 	border-radius: 0;
-	.content { padding: 10px 0px; font-size: 120%; }
+	.content { padding: 0px; font-size: 120%; }
 	p { margin-top: 5px; }
 }
 .box.about-box { background: $green; }
@@ -388,6 +401,10 @@ a.highlight-link-bubble {
 	h2 { font-size: 200%; font-family: 'ABeeZee', sans-serif; }
 }
 
+.cursor-border {
+	border-right: 3px solid $dark_blue;
+}
+
 .portfolio-item {
 	font-size: 80%;
 }
@@ -427,4 +444,10 @@ a.highlight-link-bubble {
 	font-size: 120%;
 }
 
-.fa-twitter, .fa-facebook, .fa-linkedin { margin-right:120px; }
+.fa-twitter, .fa-facebook, .fa-linkedin {
+	margin-right: 8px;
+	&:focus, &:active, &:hover {
+		text-decoration: none;
+		color: lighten($dark_blue, 10%);
+	}
+}

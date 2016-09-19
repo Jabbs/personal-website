@@ -1,0 +1,20 @@
+<%= form_for @contact_request do |f| %>
+	<div class="content" style="padding:25px 20px 20px 20px;">
+		<div class="form-group">
+			<div class="input-group">
+			  <span class="input-group-addon" id="sizing-addon1"><i class='fa fa-user' style="padding-left:2px;padding-right:2px;"></i></span>
+			  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" aria-describedby="sizing-addon1" autocomplete="off" required>
+			</div>
+			<div class="input-group top-margin-small">
+			  <span class="input-group-addon" id="sizing-addon2"><span style="padding-left:0px;padding-right:0px;">@</span></span>
+			  <input type="email" class="form-control" placeholder="Email Address" name="contact_request[email]" aria-describedby="sizing-addon2" autocomplete="off" required>
+			</div>
+			<div class="input-group top-margin-small">
+			  <span class="input-group-addon"><i class='fa fa-comment-o' style="padding-left:1px;padding-right:0px;"></i></span>
+			  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="5"></textarea>
+			</div>
+		</div>
+		<%= render "shared/spamcatcher_field" %>
+		<%= f.button "Send Message", data: { disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." }, class: "btn btn-default btn-block top-margin-small" %>
+	</div>
+<% end %>
