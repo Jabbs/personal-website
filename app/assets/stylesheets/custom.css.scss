@@ -249,7 +249,7 @@ a.highlight-link-bubble {
 }
 
 #banner {
-  min-height: 600px;
+  min-height: 680px;
 }
 
 .line-about, .li-about.active {
@@ -324,19 +324,22 @@ a.highlight-link-bubble {
 }
 
 .screenshot-background {
-	height: 500px;
+	height: 700px;
 	background: $white;
 	text-align: center;
 	.portfolio-logo {
 		text-align: center;
 		margin-bottom: 0px;
-		margin-top: 50px;
+		margin-top: 150px;
 	}
 }
+.portfolio-link {
+	color: $white;
+}
 .portfolio-background {
-	height: 500px;
+	height: 700px;
 	background: $grey_light;
-	padding: 50px 0px;
+	padding: 150px 0px;
 	.tabs { display:table; margin:0 auto; }
 	h4 { font-weight: bold; }
 	.portfolio-content {

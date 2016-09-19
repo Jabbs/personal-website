@@ -14,82 +14,37 @@
 	</h1>
 </div>
 
-<div class="row">
-	<div class="col-md-4 screenshot-background">
-		<div class="portfolio-logo">
-			<%= link_to "http://www.yourmunicipal.com", target: "_blank", title: "Municipal"  do %>
-				<%= image_tag "//s3.amazonaws.com/caw-prod/logos/CAW-Municipal-Logo-Web+App-44.png", alt: "Municipal", title: "Municipal" %>
-			<% end %>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" style="height: 700px;">
+    <div class="item active">
+      <%= render "shared/carousel/carousel", product: "municipal" %>
+    </div>
+    <div class="item">
+			<%= render "shared/carousel/carousel", product: "hellobar" %>
+    </div>
+		<div class="item">
+			<%= render "shared/carousel/carousel", product: "huntclub" %>
 		</div>
-		<%= scroll_reveal animation: "enter left and move 200px over 3s" do %>
-			<%= link_to "http://www.yourmunicipal.com", target: "_blank", title: "Municipal" do %>
-				<%= image_tag "//s3.amazonaws.com/petejabbour-website/screenshot-caw.png" %>
-			<% end %>
-		<% end %>
-	</div>
-	<div class="col-md-8 portfolio-background">
-		<div class="portfolio-content">
+  </div>
 
-			<div class="tabs">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#tech" aria-controls="tech" role="tab" data-toggle="tab">Technology</a></li>
-					<li role="presentation"><a href="#project" aria-controls="project" role="tab" data-toggle="tab">Product Overview</a></li>
-				</ul>
-
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="tech">
-						<ul class="list-unstyled">
-							<li>
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-code fa-stack-1x fa-inverse"></i>
-								</span> Ruby on Rails, Javascript, AJAX
-							</li>
-							<li>
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-code fa-stack-1x fa-inverse"></i>
-								</span> HTML5, CSS3/SCSS, jQuery, Bootstrap
-							</li>
-							<li>
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-database fa-stack-1x fa-inverse"></i>
-								</span> PostgreSQL, Redis
-							</li>
-							<li>
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
-								</span> Google Maps API, Facebook Open Graph
-							</li>
-							<li>
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
-								</span> AWS, Heroku, Github
-							</li>
-							<li>
-								<span class="fa-stack">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-hand-o-right fa-stack-1x fa-inverse"></i>
-								</span>
-								100% Contribution
-							</li>
-						</ul>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="project">
-						Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vivamus laoreet. Cras sagittis. Vivamus laoreet. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi.
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="padding-top:330px;">
+    <span class="fa fa-chevron-left fa-2x" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="padding-top:330px;">
+    <span class="fa fa-chevron-right fa-2x" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
-<%= render "shared/map", height: "1000px" %>
+<%= render "shared/map", height: "500px" %>
 <%= render "shared/social_media" %>
