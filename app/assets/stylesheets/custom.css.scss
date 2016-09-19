@@ -1,6 +1,6 @@
 $linkColor: #686868;
 @import "bootstrap";
-@import url('//fonts.googleapis.com/css?family=ABeeZee:400,400italic');
+@import url('//fonts.googleapis.com/css?family=Droid+Sans+Mono');
 
 /* MIXINS */
 @mixin rounded_border_lg {
@@ -112,11 +112,10 @@ button {margin:0px;}
 body {
   color: $body_grey;
   background: $grey;
-  font-family: sans-serif;
+  font-family: 'Droid Sans Mono', monospace;
 	font-weight:300;
 }
 h1, h2, h3, h4, h5, h6, p { margin: 0px; padding: 0px; }
-h1, h2, h3, h4 { font-family: sans-serif; font-weight:300; }
 h5, h6 { font-family: sans-serif; font-style:italic}
 .inline { display: inline; }
 .huge { font-size: 500%; line-height: 100%; }
@@ -329,7 +328,7 @@ a.highlight-link-bubble {
 	text-align: center;
 	.portfolio-logo {
 		text-align: center;
-		margin-bottom: 0px;
+		margin-bottom: 60px;
 		margin-top: 150px;
 	}
 }
@@ -346,10 +345,10 @@ a.highlight-link-bubble {
 		font-size: 150%;
 		// ul { display:table; margin:0 auto; }
 		.tab-content {
-			width: 500px;
+			width: 600px;
 			height: 330px;
 			font-size: 18px;
-			padding: 40px;
+			padding: 30px 40px;
 			background: $white;
 			@include rounded_bottom_border;
 		}
