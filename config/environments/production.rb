@@ -12,14 +12,14 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => 'smtp.gmail.com',
     :port                 => 587,
-    :domain               => 'www.petejabbour.info',
+    :domain               => 'gmail.com',
     :user_name            => ENV['GMAIL_USERNAME'],
     :password             => ENV['GMAIL_PASSWORD'],
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 
   # Set the default host option for mailer
-  config.action_mailer.default_url_options = { :host => 'www.petejabbour.info' }
+  # config.action_mailer.default_url_options = { :host => 'www.petejabbour.info' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
