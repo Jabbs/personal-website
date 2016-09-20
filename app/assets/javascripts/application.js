@@ -28,6 +28,11 @@ $(function() {
 			scrollTop: $("#portfolio").offset().top
 		}, 800);
 	});
+	$('.location-link').click( function() {
+		$('html, body').animate({
+			scrollTop: $(".location-window").offset().top
+		}, 800);
+	});
 
 	$('.send-to-top').click(function() {
 		$('html, body').animate({
