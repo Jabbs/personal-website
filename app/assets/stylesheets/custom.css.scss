@@ -282,6 +282,7 @@ a.highlight-link-bubble {
 }
 
 .box {
+	padding: 10px;
 	border: none;
 	background: $grey;
 	color: $white;
@@ -380,6 +381,10 @@ a.highlight-link-bubble {
 	}
 }
 
+.social-media {
+	margin-top:10px;
+}
+
 .message-sent-link {
 	display: none;
 	margin-top: 20px;
@@ -446,16 +451,17 @@ a.highlight-link-bubble {
 
 .box-transparent {
 	background: transparent;
-	border: 5px solid transparent;
-	color: $dark_blue;
-	a { color: $dark_blue; }
 	a:hover { text-decoration: none; }
-	h1 { font-size: 300%; font-family: 'ABeeZee', sans-serif; }
-	h2 { font-size: 200%; font-family: 'ABeeZee', sans-serif; }
+	h1 { font-weight: bold; }
+}
+
+.pete-jabbour {
+	padding-right: 3px;
+	border-right: 3px solid transparent;
 }
 
 .cursor-border {
-	border-right: 3px solid $dark_blue;
+	border-right: 3px solid white;
 }
 
 .portfolio-item {
@@ -464,31 +470,22 @@ a.highlight-link-bubble {
 
 .transparent_background {
 	width:100%;
-	height:160px;
+	height:200px;
 	position:relative;
 	z-index: 0;
-	top:-120px;
+	padding:10px;
 }
 .transparent_background:after {
 	content:'';
-	background: image-url("grey_block.png");
+	background: black;
 	width:100%;
-	height:150px;
+	height:200px;
 	position:absolute;
 	z-index:-1;
 	top:0;
 	left:0;
-	opacity:0.7;
-}
-.transparent_background_child {
-	overflow: hidden;
-	color: $white;
-	line-height:115%;
-	::-webkit-input-placeholder { /* WebKit browsers */ color:    lighten($grey_dark, 20%); }
-	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */   color:    lighten($grey_dark, 20%); opacity:  1; }
-	::-moz-placeholder { /* Mozilla Firefox 19+ */			color:    lighten($grey_dark, 20%); opacity:  1; }
-	:-ms-input-placeholder { /* Internet Explorer 10+ */color:    lighten($grey_dark, 20%); }
-	a {color: $white;}
+	opacity:0.5;
+	@include rounded_border;
 }
 
 .portfolio-description {
@@ -497,8 +494,10 @@ a.highlight-link-bubble {
 	font-size: 120%;
 }
 
-.fa-twitter, .fa-facebook, .fa-linkedin, .fa-github {
+.fa-twitter, .fa-facebook, .fa-linkedin {
 	margin-right: 8px;
+}
+.fa-twitter, .fa-facebook, .fa-linkedin, .fa-github {
 	transition: all 0.9s ease;
 	&:focus, &:active, &:hover {
 		text-decoration: none;
