@@ -1,11 +1,13 @@
 <div class="row">
-	<div class="col-md-4 screenshot-background">
+	<div class="col-md-4 col-sm-4 col-xs-12 screenshot-background">
 		<div class="portfolio-logo">
       <%= render "shared/carousel/logo_links/#{product}" %>
 		</div>
-    <%= render "shared/carousel/screenshot_imgs/#{product}" %>
+		<div class="portfolio-screen">
+			<%= render "shared/carousel/screenshot_imgs/#{product}" %>
+		</div>
 	</div>
-	<div class="col-md-8 portfolio-background">
+	<div class="col-md-8 col-sm-8 col-xs-12 portfolio-background">
 		<div class="portfolio-content">
 			<div class="tabs">
 				<!-- Nav tabs -->

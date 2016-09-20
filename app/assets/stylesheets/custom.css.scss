@@ -63,7 +63,7 @@ $grey: #808084;
 $red: #e53238;
 
 // From the new Style Guide
-$dark_blue: #0f294a; $light_orange: #ffc62c; $body_grey: #4a4a4a;
+$dark_blue: #0f294a; $light_orange: #ffc62c; $body_grey: #808084;
 
 .white {color: white;}
 .green {color: $green;}
@@ -111,7 +111,7 @@ button {margin:0px;}
 
 body {
   color: $body_grey;
-  background: $grey;
+  background: $white;
   font-family: 'Droid Sans Mono', monospace;
 	font-weight:300;
 }
@@ -241,8 +241,30 @@ a.highlight-link-bubble {
 	}
 }
 
+.location-window {
+	height: 900px;
+	.container {
+		padding-top: 86px; padding-bottom:86px;
+	}
+}
+
+.african-proverb-row {
+	padding-top: 380px;
+	.proverb {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 .contact-request-row {
 	display: none;
+	padding-top: 277px;
+}
+
+.footer {
+	.blue-light-background { height: 900px; }
+	.content-container { height:800px; }
+	.copyright { text-align: right; margin-top: 43px; margin-right: 40px; }
 }
 
 #map {
@@ -359,6 +381,8 @@ a.highlight-link-bubble {
 }
 
 .message-sent-link {
+	display: none;
+	margin-top: 20px;
 	border-color: $green;
 	color: $green;
 	&:hover { cursor: default; }
