@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
-gem 'pg'
+gem 'pg', '0.20.0'
 gem 'rails_12factor', group: :production
 gem 'bcrypt-ruby'
 gem 'faker'
