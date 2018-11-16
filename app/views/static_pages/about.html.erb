@@ -77,8 +77,8 @@
 <div class="parallax-window location-window" data-parallax="scroll" data-position="0px 0px" data-image-src="https://s3.amazonaws.com/petejabbour-website/Illinois_Centennial_Memorial_Column.jpg">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="center white">
+			<div class="col-md-12">
+				<div class="center white" id="location-find-me">
 					<%= scroll_reveal animation: "enter top and move 100px over 2s" do %>
 						<div style="font-size: 20px; line-height: 36px;">
 							You can often find me at one of these Chicago
@@ -110,21 +110,23 @@
 				<div class="african-proverb-row">
 					<div class="row">
 						<div class="col-md-12">
-							<%= scroll_reveal animation: "enter bottom and move 100px over 3s" do %>
-								<div class="proverb">
-									<p>
-										"If you want to go fast, go alone. If you want to go far, go together."
-									</p>
-									<p>
-										-- African Proverb --
-									</p>
-								</div>
-								<div class="custom-link contact-request-link" style="margin-top: 40px;">Get In Touch</div>
-								<div class="custom-link message-sent-link">
-									<i class="fa fa-check"></i>
-									Message Delivered
-								</div>
-							<% end %>
+							<div id="proverb">
+								<%= scroll_reveal animation: "enter bottom and move 100px over 3s" do %>
+									<div class="proverb">
+										<p>
+											"If you want to go fast, go alone. If you want to go far, go together."
+										</p>
+										<p>
+											-- African Proverb --
+										</p>
+									</div>
+									<div class="custom-link contact-request-link" style="margin-top: 40px;">Get In Touch</div>
+									<div class="custom-link message-sent-link">
+										<i class="fa fa-check"></i>
+										Message Delivered
+									</div>
+								<% end %>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -20,7 +20,6 @@
 //= require_tree .
 
 $(function() {
-
 	$("h2.contact").show(500);
 
 	$('.portfolio-link').click( function() {
