@@ -248,6 +248,14 @@ a.highlight-link-bubble {
 	}
 }
 
+.technology-link a {
+	transition: all 0.9s ease;
+	&:focus, &:active, &:hover {
+		text-decoration: none;
+		color: $green;
+	}
+}
+
 .location-window {
 	height: 900px;
 	.container {
@@ -461,6 +469,10 @@ a.highlight-link-bubble {
 .pete-jabbour {
 	padding-right: 3px;
 	border-right: 3px solid transparent;
+}
+
+.pete-jabbour-container {
+	margin-top:20px;
 }
 
 .cursor-border {

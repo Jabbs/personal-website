@@ -1,10 +1,14 @@
 <%= scroll_reveal animation: "enter right and move 50px over 2s, after 0.3s" do %>
 	<div class="box box-transparent bottom-margin">
 		<div class="content">
-			<h1 style="display: inline-block;" class="pete-jabbour">
-				Peter Jabbour
-			</h1>
-			<p style="font-weight:bold;">Rails Developer, Technology Consultant, Entrepreneur, &amp; Full-Stack Engineer</p>
+			<div class="pete-jabbour-container">
+				<h1 style="display: inline-block; margin-top:0px;" class="pete-jabbour">
+					Peter Jabbour
+				</h1>
+			</div>
+			<p style="font-weight:bold;">
+				<%= render "shared/technology_links" %>
+			</p>
 			<div class="hidden-xs hidden-sm" style="margin-top: 10px;">
 				<%= render "shared/social_media" %>
 			</div>

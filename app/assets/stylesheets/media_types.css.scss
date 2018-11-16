@@ -50,6 +50,15 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+	.social-media {
+		.item {
+			display: inline-block;
+			width: 50px;
+		}
+	}
+	.pete-jabbour-container {
+		margin-top:30px;
+	}
 	.remove-gutter-right-desktop { padding-right:15px; }
 	.remove-gutter-left-desktop { padding-left:15px; }
 	.box-main { height: 95px; font-size: 90%; padding: 5px;  }
