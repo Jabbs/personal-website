@@ -31,7 +31,7 @@ $(function() {
 		showContactRequestInfo();
 		$('html, body').animate({
 			scrollTop: 14000
-		}, 1800);
+		}, 800);
 	});
 	$('.location-link').click( function() {
 		$('html, body').animate({
@@ -63,6 +63,9 @@ $(function() {
 
 	$(".fa-long-arrow-left").click(function() {
 		hideContactRequestInfo();
+		$('html, body').animate({
+			scrollTop: $(".footer").offset().top
+		}, 200);
 	});
 
 	setTimeout(function() {
