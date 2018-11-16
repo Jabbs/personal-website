@@ -28,6 +28,12 @@ $(function() {
 			scrollTop: $("#portfolio").offset().top
 		}, 800);
 	});
+	$('.send-message-link').click( function() {
+		showContactRequestInfo();
+		$('html, body').animate({
+			scrollTop: 14000
+		}, 1800);
+	});
 	$('.location-link').click( function() {
 		$('html, body').animate({
 			scrollTop: $(".location-window").offset().top
@@ -35,20 +41,29 @@ $(function() {
 	});
 
 	$('.send-to-top').click(function() {
+		hideContactRequestInfo();
 		$('html, body').animate({
 			scrollTop: $("html").offset().top
 		}, 800);
 	});
 
-	$('.contact-request-link').click(function() {
+	var showContactRequestInfo = function() {
 		$(".african-proverb-row").hide();
 		$(".contact-request-row").fadeIn(1000);
 		$("input.contact-request-name").focus();
+	};
+
+	var hideContactRequestInfo = function() {
+		$(".contact-request-row").hide();
+		$(".african-proverb-row").fadeIn(1000);
+	};
+
+	$('.contact-request-link').click(function() {
+		showContactRequestInfo();
 	});
 
 	$(".fa-long-arrow-left").click(function() {
-		$(".contact-request-row").hide();
-		$(".african-proverb-row").fadeIn(1000);
+		hideContactRequestInfo();
 	});
 
 	setTimeout(function() {
