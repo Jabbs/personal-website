@@ -1,4 +1,4 @@
-<div id="banner" class="parallax-window" data-parallax="scroll" data-position="0px 0px" data-image-src="http://s3.amazonaws.com/petejabbour-website/chicago.jpg">
+<div id="banner" class="parallax-window about-page" data-parallax="scroll" data-position="0px 0px" data-image-src="http://s3.amazonaws.com/petejabbour-website/chicago.jpg">
 	<div class="center hidden-md hidden-lg">
 		<div style="height: 0px;">
 			<div style="position: relative; top: 20px; font-size: 200%;">
@@ -10,7 +10,9 @@
 		<div style="margin-bottom:80px;">
 			<div class="row">
 				<div class="col-md-3 col-sm-12 center">
-					<%= render "shared/scroll/my_face" %>
+					<%= scroll_reveal animation: "enter left and move 50px over 2s, after 0.3s" do %>
+						<%= render "shared/scroll/my_face" %>
+					<% end %>
 				</div>
 				<div class="col-md-9 col-sm-12">
 					<div class="row">
@@ -20,7 +22,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row top-margin">
+					<div class="row top-margin blog_post_row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div class="transparent_background_sm">
 								<%= render "shared/scroll/blog_postgres_upgrade" %>

@@ -224,9 +224,10 @@ a.highlight-link-bubble {
 
 /* Static Pages - Home */
 .postgres-upgrade {
-  height: 1500px;
+  height: 1900px;
   a {
-		color: $link_color;
+		color: lighten(blue, 15%);
+		text-decoration: underline;
   }
   .box {
     padding: 30px;
@@ -236,6 +237,10 @@ a.highlight-link-bubble {
   }
   h1 {
     margin-bottom: 10px;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
   }
 }
 
