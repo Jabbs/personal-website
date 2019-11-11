@@ -87,13 +87,13 @@
                 <code>$ pg_ctl -D /usr/local/var/postgresql@9.6 status</code> (check server is running)
               </li>
               <li>
-                <code>$ psql</code> (if not there then <code>createdb yourdbname</code> with your username in place of "yourdbname")
+                <code>$ psql</code> (if not there then <code>createdb dbusername</code> with your username in place of "dbusername")
               </li>
               <li>
-                <code>yourdbname=# \list</code> (you should see your databases from your 9.4 cluster)
+                <code>dbusername=# \list</code> (you should see your databases from your 9.4 cluster)
               </li>
               <li>
-                <code>yourdbname=# \connect name_of_database</code> (connect to one of your databases)
+                <code>dbusername=# \connect name_of_database</code> (connect to one of your databases)
               </li>
               <li>
                 <code>name_of_database=# VACUUM ANALYZE VERBOSE;</code> (generate necessary <%= link_to "pg_statistic", "https://www.postgresql.org/docs/9.6/catalog-pg-statistic.html" %>
