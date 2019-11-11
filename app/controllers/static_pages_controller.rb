@@ -14,6 +14,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def postgres_upgrade
+
+  end
+
   def portfolio
 
   end

@@ -1,0 +1,117 @@
+<% content_for :title do %>
+	<%= "Postgres upgrade 9.4 to 9.6" %>
+<% end %>
+<div class="parallax-window postgres-upgrade" data-parallax="scroll" data-position="0px 0px" data-image-src="http://s3.amazonaws.com/petejabbour-website/chicago.jpg">
+	<div class="container" style="padding-top: 40px;">
+		<div class="row">
+      <div class="col-md-3 col-sm-12 center">
+        <%= render "shared/scroll/my_face" %>
+      </div>
+      <div class="col-md-9 col-sm-12">
+				<div class="box box-height white-background bottom-margin">
+          <h1>Postgres upgrade 9.4 to 9.6</h1>
+          <small>November 10, 2019 by Peter Jabbour</small>
+          <hr/>
+          <p>
+            It's time to upgrade (since Heroku is <%= link_to "making us", "https://devcenter.heroku.com/changelog-items/1661" %>). Here area
+            the steps I took to upgrade from <%= link_to "psql", "https://www.postgresql.org/" %> 9.4 to 9.6.
+          </p>
+          <br/>
+          <p>
+            <ol>
+              <li><code>$ brew update</code></li>
+              <li>
+                <code>$ cd /usr/local/var/</code> (your postgres db clusters should be here, just FYI and can check each cluster
+                version with <code>cat /usr/local/var/name_of_cluster/PG_VERSION</code> replacing "name_of_cluster")
+              </li>
+              <li>
+                <code>$ brew list --versions | grep postgres</code> (see what versions you have installed)
+              </li>
+              <li>
+                <code>$ brew install postgresql@9.6</code> (installs postgres 9.6 if you dont already have it)
+              </li>
+              <li>
+                <code>$ brew services list</code> (check what is running and then stop it with <code>brew services stop postgresql@9.4</code>)
+              </li>
+              <li>
+                <code>$ pg_ctl -D /usr/local/var/postgresql@9.4 status</code> (depending on where your cluster is currently located, may need
+                to replace "postgresql@9.4" with "postgres" or whatever the name of cluster is) and stop any servers running with
+                <code>pg_ctl -D /usr/local/var/postgresql@9.4 stop</code>
+              </li>
+              <li>
+                <code>$ brew unlink postgresql@9.4</code>
+              </li>
+              <li>
+                <code>$ brew switch postgresql@9.6 9.6.15_1</code> (your patch version may differ)
+              </li>
+              <li>
+                <code>$ brew link postgresql@9.6 --force</code>
+              </li>
+              <li>
+                edit <code>.bash_profile</code> and modify line to <code>export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"</code> (should be "9.6" in there)
+              </li>
+              <li>
+                close and re-open terminal
+              </li>
+              <li>
+                <code>$ cat /usr/local/var/postgresql@9.6/PG_VERSION</code> (should exist and be 9.6)
+              </li>
+              <li>
+                <code>$ pg_ctl -D /usr/local/var/postgresql@9.6 stop -m fast</code> (make sure not running)
+              </li>
+              <li>
+                <code>$ pg_ctl -D /usr/local/var/postgresql@9.4 stop -m fast</code> (make sure not running)
+              </li>
+              <li>
+                <code>$ pg_upgrade --version</code> (should be 9.6.15)
+              </li>
+              <li>
+                <code>$ cd /usr/local/var/</code>
+              </li>
+              <li>
+                <code>$ ls -l</code> (check the permissions on postgresql@9.4 and postgresql@9.6 directories, should be <code>drwx------</code>,
+                if not then <code>chmod 0700 postgresql@9.4/</code>)
+              </li>
+              <li>
+                <code>$ brew list --versions | grep postgres</code> (to see all versions installed for next step, your 9.4.x may differ slightly for next command)
+              </li>
+              <li>
+                <code>$ time pg_upgrade -b /usr/local/Cellar/postgresql@9.4/9.4.24_1/bin/ -B /usr/local/Cellar/postgresql@9.6/9.6.15_1/bin/ -d /usr/local/var/postgresql@9.4
+                  -D /usr/local/var/postgresql@9.6 -v</code> (time and run the <%= link_to "pg_upgrade", "https://www.postgresql.org/docs/9.6/pgupgrade.html" %> and
+                  enable verbose internal logging)
+              </li>
+              <li>
+                <code>$ brew services start postgresql@9.6</code> (to have launchd start postgresql@9.6 now and restart at login)
+              </li>
+              <li>
+                <code>$ pg_ctl -D /usr/local/var/postgresql@9.6 status</code> (check server is running)
+              </li>
+              <li>
+                <code>$ psql</code> (if not there then <code>createdb yourdbname</code> with your username in place of "yourdbname")
+              </li>
+              <li>
+                <code>yourdbname=# \list</code> (you should see your databases from your 9.4 cluster)
+              </li>
+              <li>
+                <code>yourdbname=# \connect name_of_database</code> (connect to one of your databases)
+              </li>
+              <li>
+                <code>name_of_database=# VACUUM ANALYZE VERBOSE;</code> (generate necessary <%= link_to "pg_statistic", "https://www.postgresql.org/docs/9.6/catalog-pg-statistic.html" %>
+                for pg query performance and runs <%= link_to "vacuum", "https://www.postgresql.org/docs/9.6/sql-analyze.html" %> to cleanup dead rows)
+              </li>
+              <li>
+                <code>name_of_database=# select count(*) from users;</code> (see if records transferred over)
+              </li>
+              <li>
+                optionally <code>$ brew uninstall postgresql@9.4</code>
+              </li>
+              <li>
+                optionally <code>$ rm -rf</code> any of your old 9.4 db clusters directories located in <code>cd /usr/local/var/</code> (wiping out the 9.4 databases)
+              </li>
+            </ol>
+          </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
