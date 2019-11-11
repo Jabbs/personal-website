@@ -223,6 +223,27 @@ a.highlight-link-bubble {
 }
 
 /* Static Pages - Home */
+.postgres-upgrade {
+  height: 1900px;
+  a {
+		color: lighten(blue, 15%);
+		text-decoration: underline;
+  }
+  .box {
+    padding: 30px;
+		li {
+			margin-bottom: 5px;
+		}
+  }
+  h1 {
+    margin-bottom: 10px;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+  }
+}
+
 .fa-long-arrow-left {
 	transition: all 0.9s ease;
 	&:hover {
@@ -244,7 +265,7 @@ a.highlight-link-bubble {
 .social-media {
 	.item {
 		display: inline-block;
-		width: 30px;
+		width: 35px;
 	}
 }
 
@@ -293,6 +314,19 @@ a.highlight-link-bubble {
 	&:hover {
 		cursor: pointer;
 		color: $green;
+	}
+}
+
+.blog_post_li {
+	padding-left: 10px;
+	color: $white;
+	a {
+		color: $white;
+		transition: all 0.9s ease;
+	}
+	a:hover {
+		color: $green;
+		text-decoration: none;
 	}
 }
 
@@ -509,7 +543,27 @@ a.highlight-link-bubble {
 	z-index:-1;
 	top:0;
 	left:0;
-	opacity:0.5;
+	opacity:0.6;
+	@include rounded_border;
+}
+
+.transparent_background_sm {
+	width:100%;
+	height:40px;
+	position:relative;
+	z-index: 0;
+	padding:10px;
+}
+.transparent_background_sm:after {
+	content:'';
+	background: black;
+	width:100%;
+	height:40px;
+	position:absolute;
+	z-index:-1;
+	top:0;
+	left:0;
+	opacity:0.6;
 	@include rounded_border;
 }
 

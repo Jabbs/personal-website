@@ -34,11 +34,17 @@
 	.chevron { padding:177px 0px 0px 6px; }
 	#map {margin-bottom: 40px;}
 	.img-circle { margin-top: 80px; }
-	.box { text-align: center; color: white; }
-	.box { a { text-align: center; color: white; } }
-	.box-transparent { h1 {font-size:200%; margin-top:5%; max-width: 400px; } }
-	.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
-	.box-transparent { h2.contact {font-size:140%; margin-top:2%;} }
+	.about-page {
+		.box { text-align: center; color: white; }
+		.box { a { text-align: center; color: white; } }
+		.box-transparent { h1 {font-size:200%; margin-top:5%; max-width: 400px; } }
+		.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
+		.box-transparent { h2.contact {font-size:140%; margin-top:2%;} }
+		.blog_post_row {
+			position: relative;
+			top: 40px;
+		}
+	}
 	.portfolio-description {margin-top:40px;}
 	.portfolio-logo {margin-top: 50px; }
 	.portfolio-logo a img, .portfolio-logo img { max-width: 180px; }
@@ -49,6 +55,11 @@
 	.tab-content ul, .tab-content p { font-size: 75%; }
 	.cursor-border { border-color: white; }
 	.transparent_background { top: 50px; }
+	.postgres-upgrade {
+		position: relative;
+		top: -100px;
+		.my-face { margin-bottom: 20px; }
+	}
 }
 
 /* Landscape phone to portrait tablet */
@@ -65,11 +76,17 @@
 	.chevron { padding:177px 0px 0px 6px; }
 	#map {margin-bottom: 40px;}
 	.img-circle { margin-top: 80px; }
-	.box { text-align: center; color: white; }
-	.box { a { text-align: center; color: white; } }
-	.box-transparent { h1 {font-size:200%; margin-top:5%; max-width: 400px; } }
-	.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
-	.box-transparent { h2.contact {font-size:140%; margin-top:2%;} }
+	.about-page {
+		.box { text-align: center; color: white; }
+		.box { a { text-align: center; color: white; } }
+		.box-transparent { h1 {font-size:200%; margin-top:5%; max-width: 400px; } }
+		.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
+		.box-transparent { h2.contact {font-size:140%; margin-top:2%;} }
+		.blog_post_row {
+			position: relative;
+			top: 40px;
+		}
+	}
 	.portfolio-description {margin-top:40px;}
 	.portfolio-logo { margin-top: 30px; margin-bottom: 30px; max-height: 55px; }
 	.portfolio-logo a img, .portfolio-logo img { max-width: 180px; }
@@ -86,6 +103,11 @@
 	}
 	.cursor-border { border-color: white; }
 	.transparent_background { top: 50px; }
+	.postgres-upgrade {
+		position: relative;
+		top: -100px;
+		.my-face { margin-bottom: 20px; }
+	}
 }
 
 /* Landscape phones and down */
@@ -109,4 +131,21 @@
 		height: 620px;
 	}
 	.tab-content ul, .tab-content p { font-size: 60%; line-height: 180%; }
+	.about-page {
+		.box { text-align: center; color: white; }
+		.box { a { text-align: center; color: white; } }
+		.box-transparent { h1 {font-size:200%; margin-top:5%; max-width: 400px; } }
+		.box-transparent { h2.portfolio {font-size:140%; margin-top:0px;} }
+		.box-transparent { h2.contact {font-size:140%; margin-top:2%;} }
+		.blog_post_row {
+			position: relative;
+			top: 40px;
+		}
+	}
+	.postgres-upgrade {
+		position: relative;
+		top: -100px;
+		height: 3500px;
+		.my-face { margin-bottom: 20px; }
+	}
 }
