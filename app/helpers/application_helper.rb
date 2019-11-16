@@ -33,12 +33,12 @@ module ApplicationHelper
   private
 
   def metatitle
-    title = content_for?(:title) ? strip_tags(content_for(:title)).html_safe  : "Pete Jabbour | Full-Stack Ruby and Javascript Engineer"
+    title = content_for?(:title) ? strip_tags(content_for(:title)).html_safe  : "Pete Jabbour | Full-Stack Engineer"
     title.strip
   end
 
   def metadescription
-    "Chicago web developer and full-stack engineer for hire. I build modern web applications with Ruby, Ruby on Rails, Javascript, React, and PostgreSQL"
+    "Chicago full-stack engineer and web developer for hire. I build modern web applications with Ruby, Ruby on Rails, Javascript, React, and PostgreSQL"
   end
 
   def metakeywords
