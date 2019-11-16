@@ -1,6 +1,12 @@
 <% content_for :title do %>
 	<%= "Postgres upgrade 9.4 to 9.6" %>
 <% end %>
+<% content_for :description do %>
+	<%= "Steps for upgrading PostgreSQL from 9.4 to 9.6 using pg_upgrade." %>
+<% end %>
+<% content_for :keywords do %>
+	<%= "Postgres,PostgreSQL,pg_upgrade,psql,Heroku" %>
+<% end %>
 <% crumb_1 = link_to "&larr; back".html_safe, root_path, 'data-no-turbolink' => true %>
 <% crumb_2 = link_to "9.4 to 9.6 Postgres upgrade", postgres_blog_path, 'data-no-turbolink' => true %>
 <div class="parallax-window postgres-upgrade" data-parallax="scroll" data-position="0px 0px" data-image-src="http://s3.amazonaws.com/petejabbour-website/chicago.jpg">

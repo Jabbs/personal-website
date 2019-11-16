@@ -38,11 +38,15 @@ module ApplicationHelper
   end
 
   def metadescription
-    "Chicago full-stack engineer and web developer for hire. I build modern web applications with Ruby, Ruby on Rails, Javascript, React, and PostgreSQL"
+    description = "Chicago full-stack engineer and web developer for hire. I build modern web applications with Ruby, Ruby on Rails, Javascript, React, and PostgreSQL"
+    description = strip_tags(content_for(:description)).html_safe if content_for?(:description)
+    description.strip
   end
 
   def metakeywords
-    "Chicago,Web Developer,Software Engineer,Full-stack engineer,Ruby,Ruby on Rails,Javascript,React,Redux,PostgreSQL,Postgres"
+    keywords = "Chicago,Web Developer,Software Engineer,Full-stack engineer,Ruby,Ruby on Rails,Javascript,React,Redux,PostgreSQL,Postgres"
+    keywords = strip_tags(content_for(:keywords)).html_safe if content_for?(:keywords)
+    keywords.strip
   end
 
   def metaimage
