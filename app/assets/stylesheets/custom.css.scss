@@ -115,6 +115,15 @@ a:focus, .btn:focus,
 	-webkit-box-shadow: 0 3px 5px $dark_blue;
 					box-shadow: 0 3px 5px $dark_blue;
 }
+.modal-backdrop {
+  opacity:0.8 !important;
+}
+.modal-dismiss {
+	position: relative;
+	top: -10px;
+	left: 10px;
+	&:hover { cursor: pointer; }
+}
 
 /* Universal */
 .active, a {
@@ -284,8 +293,39 @@ a.highlight-link-bubble {
 	input {
 		width: 100%;
 	}
+	button {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		color: $white;
+		background-color: lighten($dark_blue, 10%);
+		height: 40px;
+		text-decoration: none;
+		transition: all 0.9s ease;
+		border: none;
+		border-radius: 0px;
+		&:hover {
+			color: $white;
+			background-color: $green;
+		}
+		&:focus, &:active {
+			outline: none;
+			color: $white;
+			text-decoration: none;
+		}
+	}
 }
-
+#contactRequestModal {
+	.modal-dialog {
+		max-width: 500px;
+	}
+}
+.my-face a:active, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+.row-send-message {
+	margin-bottom: 40px;
+}
 .social-media {
 	.item {
 		display: inline-block;

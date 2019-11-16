@@ -7,7 +7,7 @@ class ContactRequestsController < ApplicationController
     UserMailer.contact_request_email(@contact_request).deliver
     respond_to do |format|
       format.js { render :layout => false }
-      format.html { redirect_to request.referrer, notice: "Your message has been delivered" }
+      format.html { redirect_to request.referrer, notice: "your message has been delivered" }
     end
   end
 

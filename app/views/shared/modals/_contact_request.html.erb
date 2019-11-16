@@ -2,10 +2,18 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
+        <div class="no-height">
+          <div class="pull-right">
+            <span class="fa-stack grey-light modal-dismiss" data-dismiss="modal">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-remove fa-stack-1x fa-inverse white"></i>
+            </span>
+          </div>
+        </div>
         <%= form_for @contact_request, html: { id: "new_contact_request_modal_form" } do |f| %>
         	<div class="form-group">
         		<div class="input-group">
-        		  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" autofocus="true" autocomplete="off" required>
+        		  <input type="text" class="form-control name-cont-req" placeholder="Name" name="contact_request[name]" autofocus="true" autocomplete="off" required>
         		</div>
         		<div class="input-group top-margin-small">
         		  <input type="email" class="form-control" placeholder="Email" name="contact_request[email]" autocomplete="off" required>
@@ -15,7 +23,7 @@
         		</div>
         	</div>
         	<%= render "shared/spamcatcher_field" %>
-        	<%= f.button "Send", data: { disable_with: "Sending..." }, class: "btn btn-default btn-block top-margin-small" %>
+        	<%= f.button "send", data: { disable_with: "sending..." }, class: "btn btn-default btn-block top-margin-small" %>
         <% end %>
       </div>
     </div>
