@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def add_meta_tags
-    content_tag(:meta, nil, 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8') +
+    content_tag(:meta, nil, 'http-equiv' => 'Content-Type', content: 'text/html; charset=utf-8') +
     content_tag(:meta, nil, name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no') +
     content_tag(:meta, nil, name: 'keywords', content: metakeywords) +
     content_tag(:meta, nil, property: 'og:site_name', content: 'Jabbs.co') +
