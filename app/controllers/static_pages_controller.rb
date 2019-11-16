@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
 
   def about
-    @contact_request = ContactRequest.new
     @map_latitude = 41.9130000
     @map_longitude = -87.6667777
     @locations = Location.all
@@ -15,19 +14,15 @@ class StaticPagesController < ApplicationController
   end
 
   def postgres_upgrade
-
   end
 
   def portfolio
-
   end
 
   def services
-
   end
 
   def contact
-    @contact_request = ContactRequest.new
     @map_latitude = 41.9130000
     @map_longitude = -87.6667777
     @locations = Location.all

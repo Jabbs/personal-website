@@ -101,7 +101,20 @@ button {margin:0px;}
     transition: none !important;
 		background: $grey;
 }
-
+select:focus, select:active,
+a:focus, .btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+	outline: none;
+}
+.img-circle {
+  border-radius: 50%;
+	-webkit-box-shadow: 0 3px 5px $dark_blue;
+					box-shadow: 0 3px 5px $dark_blue;
+}
 
 /* Universal */
 .active, a {
@@ -231,6 +244,9 @@ a.highlight-link-bubble {
   }
   .box {
     padding: 30px;
+		@include rounded_border;
+		-webkit-box-shadow: 0 3px 5px $dark_blue;
+						box-shadow: 0 3px 5px $dark_blue;
 		li {
 			margin-bottom: 5px;
 		}
@@ -258,6 +274,14 @@ a.highlight-link-bubble {
 	input {
 		border: none;
 		border-color: transparent;
+		width: 100%;
+	}
+}
+#new_contact_request_modal_form {
+	.input-group {
+		width: 100%;
+	}
+	input {
 		width: 100%;
 	}
 }
@@ -314,6 +338,28 @@ a.highlight-link-bubble {
 	&:hover {
 		cursor: pointer;
 		color: $green;
+	}
+}
+
+a.btn-send-message-modal {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: $white;
+	background-color: lighten($dark_blue, 10%);
+	height: 40px;
+	text-decoration: none;
+	@include rounded_border;
+	transition: all 0.9s ease;
+	-webkit-box-shadow: 0 3px 5px $dark_blue;
+					box-shadow: 0 3px 5px $dark_blue;
+	&:hover {
+		color: $white;
+		background-color: $green;
+	}
+	&:focus, &:active {
+		outline: none;
+		color: $white;
+		text-decoration: none;
 	}
 }
 
@@ -407,7 +453,10 @@ a.highlight-link-bubble {
 }
 
 .blue-background { background: $dark_blue; }
-.blue-light-background { background: lighten($dark_blue, 10%); }
+.blue-light-background {
+	background-color: lighten($dark_blue, 10%);
+	background-image: radial-gradient(lighten($dark_blue, 20%), darken($dark_blue, 5%));
+}
 .red-background { background: $red; }
 .green-background { background: $green; }
 .orange-background { background: $orange; }
@@ -545,6 +594,8 @@ a.highlight-link-bubble {
 	left:0;
 	opacity:0.6;
 	@include rounded_border;
+	-webkit-box-shadow: 0 3px 5px $dark_blue;
+					box-shadow: 0 3px 5px $dark_blue;
 }
 
 .transparent_background_sm {
@@ -565,6 +616,8 @@ a.highlight-link-bubble {
 	left:0;
 	opacity:0.6;
 	@include rounded_border;
+	-webkit-box-shadow: 0 3px 5px $dark_blue;
+					box-shadow: 0 3px 5px $dark_blue;
 }
 
 .portfolio-description {

@@ -1,0 +1,23 @@
+<div class="modal fade" id="contactRequestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= form_for @contact_request, html: { id: "new_contact_request_modal_form" } do |f| %>
+        	<div class="form-group">
+        		<div class="input-group">
+        		  <input type="text" class="form-control" placeholder="Name" name="contact_request[name]" autofocus="true" autocomplete="off" required>
+        		</div>
+        		<div class="input-group top-margin-small">
+        		  <input type="email" class="form-control" placeholder="Email" name="contact_request[email]" autocomplete="off" required>
+        		</div>
+        		<div class="input-group top-margin-small">
+        		  <textarea class="form-control" placeholder="Message" name="contact_request[message]" required rows="5"></textarea>
+        		</div>
+        	</div>
+        	<%= render "shared/spamcatcher_field" %>
+        	<%= f.button "Send", data: { disable_with: "Sending..." }, class: "btn btn-default btn-block top-margin-small" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
