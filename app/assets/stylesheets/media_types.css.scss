@@ -25,6 +25,7 @@
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
+	.row-send-message { margin-bottom: 0px; }
 	.social-media {
 		.item { width: 50px; }
 	}
@@ -59,11 +60,13 @@
 		position: relative;
 		top: -100px;
 		.my-face { margin-bottom: 20px; }
+		.row-send-message { margin-bottom: 20px; }
 	}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+	.row-send-message { margin-bottom: 0px; }
 	.social-media {
 		.item { width: 50px; }
 	}
@@ -107,11 +110,13 @@
 		position: relative;
 		top: -100px;
 		.my-face { margin-bottom: 20px; }
+		.row-send-message { margin-bottom: 20px; }
 	}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	.row-send-message { margin-bottom: 20px; }
 	.tab-content { max-width: 360px; }
 	.footer {
 		.blue-light-background { height: 600px; }

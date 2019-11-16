@@ -22,6 +22,10 @@
 $(function() {
 	$("h2.contact").show(500);
 
+	$('#contactRequestModal').on('shown.bs.modal', function (e) {
+	  $("input.name-cont-req").focus();
+	})
+
 	$('.portfolio-link').click( function() {
 		$('html, body').animate({
 			scrollTop: $("#portfolio").offset().top
