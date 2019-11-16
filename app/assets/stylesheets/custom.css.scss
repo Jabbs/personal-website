@@ -676,3 +676,19 @@ a.btn-send-message-modal {
 		color: $green;
 	}
 }
+.breadcrumbs-container {
+	height: 0px;
+	font-size: 12px;
+	.breadcrumbs {
+		position: relative;
+		top: 20px;
+		a {
+			color: $grey;
+			text-decoration: none;
+			&:hover {
+				color: $grey;
+				text-decoration: none;
+			}
+		}
+	}
+}
