@@ -66,6 +66,9 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+	.container {
+		word-break: break-word;
+	}
 	.row-send-message { margin-bottom: 0px; }
 	.social-media {
 		.item { width: 50px; }
