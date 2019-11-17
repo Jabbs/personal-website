@@ -16,8 +16,10 @@
 					<% end %>
 				</div>
 				<div class="col-md-9 col-sm-12">
-					<%= render "shared/scroll/about" %>
-					<%= render "shared/scroll/blog_postgres_upgrade" %>
+					<%= scroll_reveal animation: "enter right and move 50px over 2s, after 0.5s" do %>
+						<%= render "shared/scroll/about" %>
+						<%= render "shared/scroll/blog_postgres_upgrade" %>
+					<% end %>
 				</div>
 			</div>
 		</div>
